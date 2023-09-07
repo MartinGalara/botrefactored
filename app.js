@@ -4,67 +4,33 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const JsonFileAdapter = require('@bot-whatsapp/database/json')
 
-const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
+const { respuestaConDelay } = require("./components/api/apiMensajes.js")
+const { validateUser } = require("./components/api/apiUsuarios.js")
+const { opMenuInicial } = require("./components/api/apiOpciones.js")
 
-const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswer(
-    [
-        '📄 Aquí encontras las documentación recuerda que puedes mejorarla',
-        'https://bot-whatsapp.netlify.app/',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
+const flujoInstructivos = require("./components/flows/flujoInstructivos.js")
+const flujoSoporte = require("./components/flows/flujoSoporte.js")
 
-const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
-    [
-        '🙌 Aquí encontras un ejemplo rapido',
-        'https://bot-whatsapp.netlify.app/docs/example/',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
+const flujoPrincipal = addKeyword("sigesbot")
+    .addAnswer('Gracias por comunicarte con Sistema SIGES.',{}, async (ctx,{provider,endFlow}) => {
 
-const flowGracias = addKeyword(['gracias', 'grac']).addAnswer(
-    [
-        '🚀 Puedes aportar tu granito de arena a este proyecto',
-        '[*opencollective*] https://opencollective.com/bot-whatsapp',
-        '[*buymeacoffee*] https://www.buymeacoffee.com/leifermendez',
-        '[*patreon*] https://www.patreon.com/leifermendez',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
+        const user = await validateUser(ctx.from)
+        if(!user) return endFlow("Este numero de telefono no esta dado de alta, solicite que le den el alta para usar el bot")
+        const opciones = opMenuInicial(ctx.from)
+        respuestaConDelay(ctx.from,provider,opciones)
+    })
+    .addAnswer('Elija la opcion deseada',{capture:true},async (ctx,{endFlow,fallBack}) => {
+        
+        if(ctx.body === '3') return endFlow({body: `Escriba "sigesbot" para volver a comenzar`})
 
-const flowDiscord = addKeyword(['discord']).addAnswer(
-    ['🤪 Únete al discord', 'https://link.codigoencasa.com/DISCORD', '\n*2* Para siguiente paso.'],
-    null,
-    null,
-    [flowSecundario]
-)
+        if(ctx.body !== '1' && ctx.body !== '2') return fallBack("Opcion invalida - Ingrese una opcion valida");
+        
+    },[flujoInstructivos,flujoSoporte])
 
-const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
-    .addAnswer('🙌 Hola bienvenido a este *Chatbot*')
-    .addAnswer(
-        [
-            'te comparto los siguientes links de interes sobre el proyecto',
-            '👉 *doc* para ver la documentación',
-            '👉 *gracias*  para ver la lista de videos',
-            '👉 *discord* unirte al discord',
-        ],
-        null,
-        null,
-        [flowDocs, flowGracias, flowTuto, flowDiscord]
-    )
 
 const main = async () => {
     const adapterDB = new JsonFileAdapter()
-    const adapterFlow = createFlow([flowPrincipal])
+    const adapterFlow = createFlow([flujoPrincipal])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({

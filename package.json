@@ -12,10 +12,11 @@
         "@bot-whatsapp/bot": "latest",
         "@bot-whatsapp/cli": "latest",
         "@bot-whatsapp/database": "latest",
-        "@bot-whatsapp/provider": "latest",
         "@bot-whatsapp/portal": "latest",
-        "mime-types": "2.1.35",
+        "@bot-whatsapp/provider": "latest",
         "@whiskeysockets/baileys": "^6.4.0",
+        "axios": "^1.5.0",
+        "mime-types": "2.1.35",
         "wa-sticker-formatter": "4.3.2"
     },
     "author": "",
