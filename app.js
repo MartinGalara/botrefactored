@@ -13,7 +13,7 @@ const flujoSoporte = require("./components/flows/flujoSoporte.js")
 const flujoDespachosCio = require("./components/flows/flujoDespachosCio.js")
 
 const flujoPrincipal = addKeyword("sigesbot")
-    .addAnswer('Gracias por comunicarte con Sistema SIGES.',{}, async (ctx,{provider,endFlow}) => {
+    .addAnswer('Gracias por comunicarte con Sistema SIGES.',{}, async (ctx,{provider,endFlow,fallBack,flowDynamic,goToFlow}) => {
 
         const user = await validateUser(ctx.from)
         if(!user) return endFlow("Este numero de telefono no esta dado de alta, solicite que le den el alta para usar el bot")
@@ -26,7 +26,7 @@ const flujoPrincipal = addKeyword("sigesbot")
 
         if(ctx.body !== '1' && ctx.body !== '2') return fallBack("Opcion invalida - Ingrese una opcion valida");
         
-    },[flujoDespachosCio])
+    },[flujoInstructivos,flujoSoporte])
 
 
 const main = async () => {
@@ -44,3 +44,5 @@ const main = async () => {
 }
 
 main()
+
+module.exports = flujoPrincipal

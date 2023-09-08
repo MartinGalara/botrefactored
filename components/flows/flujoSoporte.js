@@ -9,6 +9,8 @@ const { computerOptions,opMenuProblemas } = require('../api/apiOpciones')
 const opcionesIncidentes = opMenuProblemas('array').join('\n');
 
 const flujoDespachosCio = require("./flujoDespachosCio")
+const flujoAplicaciones = require("./flujoAplicaciones")
+const flujoImpresoraFiscal = require("./flujoImpresoraFiscal")
 
 const flujoSoporte = addKeyword("2",{sensitive:true})
 .addAnswer(["Elija desde donde necesita soporte","1. YPF","2. SHELL","3. AXION","4. PUMA","5. GULF","6. REFINOR","7. EST. BLANCA","8. OTRO"],{capture:true},(ctx,{fallBack}) => {
@@ -73,7 +75,8 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
     if(!opciones.includes(ctx.body)) return fallBack()
 
     addProps(ctx.from,{problem: ctx.body}) 
+    addProps(ctx.from,{pregunta: 1}) 
 
-},[flujoDespachosCio])
+},[flujoDespachosCio,flujoAplicaciones,flujoImpresoraFiscal])
 
 module.exports = flujoSoporte

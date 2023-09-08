@@ -5,7 +5,7 @@ const { respuestaConDelay } = require('../api/apiMensajes')
 const { addProps } = require('../api/apiTickets')
 const { sendFile } = require('../api/apiInstructivos')
 
-const flujoAplicaciones = addKeyword('1',{sensitive:true})
+const flujoInstructivos = addKeyword('1',{sensitive:true})
 .addAction( (ctx,{provider}) => {
     const opciones = opMenuInstructivos(ctx.from)
     respuestaConDelay(ctx.from,provider,opciones)
@@ -36,4 +36,4 @@ const flujoAplicaciones = addKeyword('1',{sensitive:true})
     await sendFile(ctx.from,ctx.body,provider)
 })
 
-module.exports = flujoAplicaciones
+module.exports = flujoInstructivos

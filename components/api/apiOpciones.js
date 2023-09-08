@@ -102,12 +102,12 @@ const opMenuProblemas = (string) => {
 
     switch (string) {
         case 'array':
-            return ['Elija el numero del problema que tiene','1. Despachos CIO','2. Aplicaciones','3. Impresora Fiscal / Comandera','4. Impresora Común / Oficina','5. Sistema SIGES','6. Libro IVA','7. Servidor']
+            return ['Elija el numero del problema que tiene','1. Despachos CIO','2. Apps de Pago y Fidelización','3. Impresora Fiscal / Comandera','4. Impresora Común / Oficina','5. Sistema SIGES','6. Libro IVA','7. Servidor']
     
         case 'obj':
             return {
                 1: "Despachos CIO",
-                2: "Aplicaciones",
+                2: "Apps de Pago y Fidelización",
                 3: "Impresora Fiscal / Comandera",
                 4: "Impresora Común / Oficina",
                 5: "Sistema SIGES",
@@ -116,7 +116,7 @@ const opMenuProblemas = (string) => {
             }
         
         case 'opciones':
-            return ['Despachos CIO','Aplicaciones','Impresora Fiscal / Comandera','Impresora Común / Oficina','Sistema SIGES','Libro IVA','Servidor']
+            return ['Despachos CIO','Apps de Pago y Fidelización','Impresora Fiscal / Comandera','Impresora Común / Oficina','Sistema SIGES','Libro IVA','Servidor']
         
         default:
             break;

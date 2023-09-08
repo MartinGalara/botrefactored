@@ -25,7 +25,7 @@ const sendFile = async (from, body, provider) => {
       fileName: filenameWithoutExtension,
     });
 
-    await prov.sendMessage(`${from}@s.whatsapp.net`,{text:`Gracias por comunicarse con nosotros.`})
+    //await prov.sendMessage(`${from}@s.whatsapp.net`,{text:`Gracias por comunicarse con nosotros.`})
 
   };
 
