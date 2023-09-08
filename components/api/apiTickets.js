@@ -1,3 +1,5 @@
+const { downloadMediaMessage } = require('@adiwajshing/baileys')
+
 let ticket = {}
 
 const addProps = (from,props) => {
@@ -8,7 +10,6 @@ const addProps = (from,props) => {
       ticket[from] = {}
       Object.assign(ticket[from], props);
     }
-    console.log(ticket)
 }
 
 const getProp = (from,prop) => {
@@ -38,4 +39,80 @@ const getInstructivo = (from, index) => {
   return { path, filename };
 };
 
-module.exports = { addProps,getProp,deleteTicketData,getInstructivo }
+const getBandera = (from) => {
+
+  switch (ticket[from].bandera){
+
+        case "YP": 
+            return "Ingrese su numero de APIES"
+
+        case "SH": 
+            return "Ingrese su numero de identificacion SHELL"
+
+        case "AX": 
+            return "Ingrese su numero de identificacion AXION"
+
+        case "PU": 
+            return "Ingrese su numero de identificacion PUMA"
+
+        case "GU": 
+           return "Ingrese su numero de identificacion GULF"
+
+        case "RE": 
+            return "Ingrese su numero de identificacion REFINOR"
+
+        case "BL": 
+            return "Ingrese su numero de identificacion"
+
+        case "OT": 
+            return "Ingrese su numero de identificacion"
+
+        default:
+          return
+
+  }
+
+}
+
+const computerInfo = (from,option) => {
+
+  if(ticket[from].computers[option-1] && option !== "0"){
+    ticket[from].pf = ticket[from].computers[option-1].alias
+    ticket[from].tv = ticket[from].computers[option-1].teamviewer_id
+  }
+
+}
+
+const addAudio = async (from,ctx) => {
+
+  if(!ticket[from].hasOwnProperty("mailAttachments")){
+    ticket[from].mailAttachments = []
+  }
+
+  const buffer = await downloadMediaMessage(ctx,'buffer')
+
+  const audio = {
+    filename: 'adjunto.mp3',
+    content: Buffer.from(buffer, 'base64')
+  }
+  ticket[from].mailAttachments.push(audio)
+
+}
+
+const addImage = async (from,ctx) => {
+
+  if(!ticket[from].hasOwnProperty("mailAttachments")){
+    ticket[from].mailAttachments = []
+  }
+
+  const buffer = await downloadMediaMessage(ctx,'buffer')
+
+    const image = {
+      filename: 'adjunto.jpg',
+      content: Buffer.from(buffer, 'base64')
+    }
+    ticket[from].mailAttachments.push(image)
+
+}
+
+module.exports = { addProps,getProp,deleteTicketData,getInstructivo,getBandera,computerInfo,addAudio,addImage }

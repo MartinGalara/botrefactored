@@ -73,4 +73,54 @@ const opcionesInstructivos = (from) => {
     });
 };
 
-module.exports = { opMenuInicial,opMenuInstructivos,opcionesInstructivos }
+const computerOptions = (from) => {
+
+    const computers = getProp(from,'computers')
+  
+    if(computers.length === 0) return 'No se encontraron puestos de trabajo registrados en esta zona\nEnvie "0" para continuar'
+  
+    const array = ['Elija el número del puesto de trabajo donde necesita soporte','Si no lo sabe o ninguno es correcto, envíe "0"']
+  
+    let i = 1;
+    
+    computers.map(e => {
+
+    array.push(
+        `${i} - ${e.alias}`
+    )
+    i++;
+        
+    })
+
+    const opciones = array.join('\n');
+    
+    return opciones;
+  
+}
+
+const opMenuProblemas = (string) => {
+
+    switch (string) {
+        case 'array':
+            return ['Elija el numero del problema que tiene','1. Despachos CIO','2. Aplicaciones','3. Impresora Fiscal / Comandera','4. Impresora Común / Oficina','5. Sistema SIGES','6. Libro IVA','7. Servidor']
+    
+        case 'obj':
+            return {
+                1: "Despachos CIO",
+                2: "Aplicaciones",
+                3: "Impresora Fiscal / Comandera",
+                4: "Impresora Común / Oficina",
+                5: "Sistema SIGES",
+                6: "Libro IVA",
+                7: "Servidor"
+            }
+        
+        case 'opciones':
+            return ['Despachos CIO','Aplicaciones','Impresora Fiscal / Comandera','Impresora Común / Oficina','Sistema SIGES','Libro IVA','Servidor']
+        
+        default:
+            break;
+    }
+}
+
+module.exports = { opMenuInicial,opMenuInstructivos,opcionesInstructivos,computerOptions,opMenuProblemas }

@@ -1,15 +1,15 @@
 [
   {
-    "ref": "1805053e-995f-4692-b30a-51bc7f86eeda",
-    "keyword": "290236b1d481a790a200ea6e94b2122a",
+    "ref": "191bf0b5-ca7a-41d3-a44b-8b49d1f84b31",
+    "keyword": "a889c0b1c04c22b1874598fbcc298825",
     "answer": "sigesbot",
     "options": {},
     "from": "5493515924253",
     "refSerialize": "c5ec9969bd663945d9b54dda57567456"
   },
   {
-    "ref": "ans_0d6138e8-e779-403b-b504-5fa23dc5c6f6",
-    "keyword": "key_e399b731-e687-46cd-97cb-2edaa50c1e39",
+    "ref": "ans_c0adb050-8067-4cc8-ab8c-d8d27a1c585b",
+    "keyword": "key_1f443bf0-d94a-4f5c-833a-d17cef7dbd38",
     "answer": "Gracias por comunicarte con Sistema SIGES.",
     "options": {
       "media": null,
@@ -21,12 +21,12 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "9e73c7387b30d03a8a6a1353a25ffe4e",
+    "refSerialize": "fa95bf7b851775f730f96fa2a7544534",
     "from": "5493515924253"
   },
   {
-    "ref": "ans_98300893-aa15-4ecd-a0cf-733739b14d4d",
-    "keyword": "ans_0d6138e8-e779-403b-b504-5fa23dc5c6f6",
+    "ref": "ans_9ccac909-24af-40a3-9674-e7c211d77265",
+    "keyword": "ans_c0adb050-8067-4cc8-ab8c-d8d27a1c585b",
     "answer": "Elija la opcion deseada",
     "options": {
       "media": null,
@@ -36,7 +36,7 @@
       "delay": 0,
       "nested": [
         {
-          "ref": "key_f72d2093-47e7-41e9-aca7-e9ff851bb128",
+          "ref": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
           "keyword": "1",
           "options": {
             "sensitive": true,
@@ -45,25 +45,9 @@
           "refSerialize": "065e0005da6e5c278a53691e53b48955"
         },
         {
-          "ref": "ans_48612d0f-5a77-42b8-af1b-26541d6c933c",
-          "keyword": "key_f72d2093-47e7-41e9-aca7-e9ff851bb128",
-          "answer": "__call_action__",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": false,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": true
-          },
-          "refSerialize": "fedba8995b018d2863acb74d297015d0"
-        },
-        {
-          "ref": "ans_015201cc-b97a-44df-a902-f8c3723ba1f3",
-          "keyword": "ans_48612d0f-5a77-42b8-af1b-26541d6c933c",
-          "answer": "Elija una categoria",
+          "ref": "ans_cb80b10c-7c9f-4fba-869b-a9ba4668c0cd",
+          "keyword": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
+          "answer": "Describa el problema por escrito o adjunte un AUDIO",
           "options": {
             "media": null,
             "buttons": [],
@@ -74,483 +58,163 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "8a3ff5b433cd6f0e212a704b3ddb824f"
-        },
-        {
-          "ref": "ans_df9bf18f-f27d-4645-aca0-e0ce6e9a6cae",
-          "keyword": "ans_015201cc-b97a-44df-a902-f8c3723ba1f3",
-          "answer": "Elija el instructivo que desea descargar",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": true,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": true
-          },
-          "refSerialize": "85afdddc47972a8ef6709657d35cc134"
-        },
-        {
-          "ref": "key_e3f2c0af-4e9e-4631-80d1-9170af19651b",
-          "keyword": "2",
-          "options": {
-            "sensitive": true,
-            "regex": false
-          },
-          "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
-        },
-        {
-          "ref": "ans_ae618d8f-5f44-4143-a347-ddb9ea9bac61",
-          "keyword": "key_e3f2c0af-4e9e-4631-80d1-9170af19651b",
-          "answer": "Eleji",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": true,
-            "child": null,
-            "delay": 0,
-            "nested": [
-              {
-                "ref": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-                "keyword": "1",
-                "options": {
-                  "sensitive": true,
-                  "regex": false
-                },
-                "refSerialize": "065e0005da6e5c278a53691e53b48955"
-              },
-              {
-                "ref": "ans_88c5fc67-1129-44b7-955b-43ead71db286",
-                "keyword": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-                "answer": "Entraste al flujo 1",
-                "options": {
-                  "media": null,
-                  "buttons": [],
-                  "capture": false,
-                  "child": null,
-                  "delay": 0,
-                  "nested": [],
-                  "keyword": {},
-                  "callback": false
-                },
-                "refSerialize": "0e4ee1d319b24fb82142b84b446079b7"
-              },
-              {
-                "ref": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-                "keyword": "2",
-                "options": {
-                  "sensitive": true,
-                  "regex": false
-                },
-                "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
-              },
-              {
-                "ref": "ans_8982e3c0-60cf-482f-9a71-c091692137e8",
-                "keyword": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-                "answer": "Entraste al flujo 2",
-                "options": {
-                  "media": null,
-                  "buttons": [],
-                  "capture": false,
-                  "child": null,
-                  "delay": 0,
-                  "nested": [],
-                  "keyword": {},
-                  "callback": false
-                },
-                "refSerialize": "6fe62e3c38102c475d37cde0c3fa1a00"
-              }
-            ],
-            "keyword": {},
-            "callback": true
-          },
-          "refSerialize": "ec358ee391bc6773bced975d7a6edf1f"
+          "refSerialize": "2a04aa597077b409a48834d2ea854310"
         }
       ],
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "b8521bff6439ff1a8c40e3a758fa2f42",
+    "refSerialize": "3654491d6943750ae6eb83c557b296c1",
     "from": "5493515924253"
   },
   {
-    "ref": "b860e68e-3e78-4e20-a39c-978082524a4e",
-    "keyword": "b8521bff6439ff1a8c40e3a758fa2f42",
-    "answer": "2",
-    "options": {},
-    "from": "5493515924253",
-    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
-  },
-  {
-    "ref": "ans_ae618d8f-5f44-4143-a347-ddb9ea9bac61",
-    "keyword": "key_e3f2c0af-4e9e-4631-80d1-9170af19651b",
-    "answer": "Eleji",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "nested": [
-        {
-          "ref": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-          "keyword": "1",
-          "options": {
-            "sensitive": true,
-            "regex": false
-          },
-          "refSerialize": "065e0005da6e5c278a53691e53b48955"
-        },
-        {
-          "ref": "ans_88c5fc67-1129-44b7-955b-43ead71db286",
-          "keyword": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-          "answer": "Entraste al flujo 1",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": false,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": false
-          },
-          "refSerialize": "0e4ee1d319b24fb82142b84b446079b7"
-        },
-        {
-          "ref": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-          "keyword": "2",
-          "options": {
-            "sensitive": true,
-            "regex": false
-          },
-          "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
-        },
-        {
-          "ref": "ans_8982e3c0-60cf-482f-9a71-c091692137e8",
-          "keyword": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-          "answer": "Entraste al flujo 2",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": false,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": false
-          },
-          "refSerialize": "6fe62e3c38102c475d37cde0c3fa1a00"
-        }
-      ],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "ec358ee391bc6773bced975d7a6edf1f",
-    "from": "5493515924253"
-  },
-  {
-    "ref": "00e54561-0077-4710-8b00-bca8a0e95947",
-    "keyword": "ec358ee391bc6773bced975d7a6edf1f",
+    "ref": "d3f9ad01-4632-437f-9d6a-56080fdb9198",
+    "keyword": "3654491d6943750ae6eb83c557b296c1",
     "answer": "1",
     "options": {},
     "from": "5493515924253",
     "refSerialize": "290236b1d481a790a200ea6e94b2122a"
   },
   {
-    "ref": "ans_88c5fc67-1129-44b7-955b-43ead71db286",
-    "keyword": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-    "answer": "Entraste al flujo 1",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "child": null,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": false
-    },
-    "refSerialize": "0e4ee1d319b24fb82142b84b446079b7",
-    "from": "5493515924253"
-  },
-  {
-    "ref": "b55c102a-834d-4ba5-9bcf-91d53ede49ef",
-    "keyword": "0e4ee1d319b24fb82142b84b446079b7",
-    "answer": "sigesbot",
-    "options": {},
-    "from": "5493515924253",
-    "refSerialize": "c5ec9969bd663945d9b54dda57567456"
-  },
-  {
-    "ref": "ans_0d6138e8-e779-403b-b504-5fa23dc5c6f6",
-    "keyword": "key_e399b731-e687-46cd-97cb-2edaa50c1e39",
-    "answer": "Gracias por comunicarte con Sistema SIGES.",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "child": null,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "9e73c7387b30d03a8a6a1353a25ffe4e",
-    "from": "5493515924253"
-  },
-  {
-    "ref": "ans_98300893-aa15-4ecd-a0cf-733739b14d4d",
-    "keyword": "ans_0d6138e8-e779-403b-b504-5fa23dc5c6f6",
-    "answer": "Elija la opcion deseada",
+    "ref": "ans_cb80b10c-7c9f-4fba-869b-a9ba4668c0cd",
+    "keyword": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
+    "answer": "Describa el problema por escrito o adjunte un AUDIO",
     "options": {
       "media": null,
       "buttons": [],
       "capture": true,
       "child": null,
       "delay": 0,
-      "nested": [
-        {
-          "ref": "key_f72d2093-47e7-41e9-aca7-e9ff851bb128",
-          "keyword": "1",
-          "options": {
-            "sensitive": true,
-            "regex": false
-          },
-          "refSerialize": "065e0005da6e5c278a53691e53b48955"
-        },
-        {
-          "ref": "ans_48612d0f-5a77-42b8-af1b-26541d6c933c",
-          "keyword": "key_f72d2093-47e7-41e9-aca7-e9ff851bb128",
-          "answer": "__call_action__",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": false,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": true
-          },
-          "refSerialize": "fedba8995b018d2863acb74d297015d0"
-        },
-        {
-          "ref": "ans_015201cc-b97a-44df-a902-f8c3723ba1f3",
-          "keyword": "ans_48612d0f-5a77-42b8-af1b-26541d6c933c",
-          "answer": "Elija una categoria",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": true,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": true
-          },
-          "refSerialize": "8a3ff5b433cd6f0e212a704b3ddb824f"
-        },
-        {
-          "ref": "ans_df9bf18f-f27d-4645-aca0-e0ce6e9a6cae",
-          "keyword": "ans_015201cc-b97a-44df-a902-f8c3723ba1f3",
-          "answer": "Elija el instructivo que desea descargar",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": true,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": true
-          },
-          "refSerialize": "85afdddc47972a8ef6709657d35cc134"
-        },
-        {
-          "ref": "key_e3f2c0af-4e9e-4631-80d1-9170af19651b",
-          "keyword": "2",
-          "options": {
-            "sensitive": true,
-            "regex": false
-          },
-          "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
-        },
-        {
-          "ref": "ans_ae618d8f-5f44-4143-a347-ddb9ea9bac61",
-          "keyword": "key_e3f2c0af-4e9e-4631-80d1-9170af19651b",
-          "answer": "Eleji",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": true,
-            "child": null,
-            "delay": 0,
-            "nested": [
-              {
-                "ref": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-                "keyword": "1",
-                "options": {
-                  "sensitive": true,
-                  "regex": false
-                },
-                "refSerialize": "065e0005da6e5c278a53691e53b48955"
-              },
-              {
-                "ref": "ans_88c5fc67-1129-44b7-955b-43ead71db286",
-                "keyword": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-                "answer": "Entraste al flujo 1",
-                "options": {
-                  "media": null,
-                  "buttons": [],
-                  "capture": false,
-                  "child": null,
-                  "delay": 0,
-                  "nested": [],
-                  "keyword": {},
-                  "callback": false
-                },
-                "refSerialize": "0e4ee1d319b24fb82142b84b446079b7"
-              },
-              {
-                "ref": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-                "keyword": "2",
-                "options": {
-                  "sensitive": true,
-                  "regex": false
-                },
-                "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
-              },
-              {
-                "ref": "ans_8982e3c0-60cf-482f-9a71-c091692137e8",
-                "keyword": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-                "answer": "Entraste al flujo 2",
-                "options": {
-                  "media": null,
-                  "buttons": [],
-                  "capture": false,
-                  "child": null,
-                  "delay": 0,
-                  "nested": [],
-                  "keyword": {},
-                  "callback": false
-                },
-                "refSerialize": "6fe62e3c38102c475d37cde0c3fa1a00"
-              }
-            ],
-            "keyword": {},
-            "callback": true
-          },
-          "refSerialize": "ec358ee391bc6773bced975d7a6edf1f"
-        }
-      ],
+      "nested": [],
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "b8521bff6439ff1a8c40e3a758fa2f42",
+    "refSerialize": "2a04aa597077b409a48834d2ea854310",
     "from": "5493515924253"
   },
   {
-    "ref": "8bbd7068-7654-4c89-84f2-ac00d0830282",
-    "keyword": "b8521bff6439ff1a8c40e3a758fa2f42",
-    "answer": "2",
+    "ref": "b70fc915-8c53-48ba-b068-2422daf46c3b",
+    "keyword": "2a04aa597077b409a48834d2ea854310",
+    "answer": "asd",
     "options": {},
     "from": "5493515924253",
-    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+    "refSerialize": "6988c0490446f551a44ac1d6ae1ba6a3"
   },
   {
-    "ref": "ans_ae618d8f-5f44-4143-a347-ddb9ea9bac61",
-    "keyword": "key_e3f2c0af-4e9e-4631-80d1-9170af19651b",
-    "answer": "Eleji",
+    "ref": "ans_cb80b10c-7c9f-4fba-869b-a9ba4668c0cd",
+    "keyword": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
+    "answer": "Si desea aqui puede adjuntar fotos\nDe lo contrario envíe \"0\" para continuar",
     "options": {
       "media": null,
       "buttons": [],
       "capture": true,
       "child": null,
       "delay": 0,
-      "nested": [
-        {
-          "ref": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-          "keyword": "1",
-          "options": {
-            "sensitive": true,
-            "regex": false
-          },
-          "refSerialize": "065e0005da6e5c278a53691e53b48955"
-        },
-        {
-          "ref": "ans_88c5fc67-1129-44b7-955b-43ead71db286",
-          "keyword": "key_1056ac3e-0cd5-4f70-9147-861fb414485f",
-          "answer": "Entraste al flujo 1",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": false,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": false
-          },
-          "refSerialize": "0e4ee1d319b24fb82142b84b446079b7"
-        },
-        {
-          "ref": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-          "keyword": "2",
-          "options": {
-            "sensitive": true,
-            "regex": false
-          },
-          "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
-        },
-        {
-          "ref": "ans_8982e3c0-60cf-482f-9a71-c091692137e8",
-          "keyword": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-          "answer": "Entraste al flujo 2",
-          "options": {
-            "media": null,
-            "buttons": [],
-            "capture": false,
-            "child": null,
-            "delay": 0,
-            "nested": [],
-            "keyword": {},
-            "callback": false
-          },
-          "refSerialize": "6fe62e3c38102c475d37cde0c3fa1a00"
-        }
-      ],
+      "nested": [],
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "ec358ee391bc6773bced975d7a6edf1f",
+    "refSerialize": "2a04aa597077b409a48834d2ea854310",
     "from": "5493515924253"
   },
   {
-    "ref": "7a0291b0-6a1d-4d65-95de-d1c9de247546",
-    "keyword": "ec358ee391bc6773bced975d7a6edf1f",
-    "answer": "2",
+    "ref": "9926c7e0-5c33-44e0-8eaf-c8553a1f5f26",
+    "keyword": "2a04aa597077b409a48834d2ea854310",
+    "answer": "_event_media__1789287d-6c42-4717-bb3b-965917107e42",
     "options": {},
     "from": "5493515924253",
-    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+    "refSerialize": "2cc42dac30fd545ff54955b765743bea"
   },
   {
-    "ref": "ans_8982e3c0-60cf-482f-9a71-c091692137e8",
-    "keyword": "key_c52a1c8b-d658-4770-92ad-45621f227611",
-    "answer": "Entraste al flujo 2",
+    "ref": "ans_cb80b10c-7c9f-4fba-869b-a9ba4668c0cd",
+    "keyword": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
+    "answer": "Si desea aqui puede adjuntar fotos\nDe lo contrario envíe \"0\" para continuar",
     "options": {
       "media": null,
       "buttons": [],
-      "capture": false,
+      "capture": true,
       "child": null,
       "delay": 0,
       "nested": [],
       "keyword": {},
-      "callback": false
+      "callback": true
     },
-    "refSerialize": "6fe62e3c38102c475d37cde0c3fa1a00",
+    "refSerialize": "2a04aa597077b409a48834d2ea854310",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "49c138d6-111b-4579-8e10-e285d57a10ce",
+    "keyword": "2a04aa597077b409a48834d2ea854310",
+    "answer": "_event_media__74a36cd4-14b1-4617-88bc-9f59ab04ad39",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "fba05bcecc94235872a73d764156c5b4"
+  },
+  {
+    "ref": "ans_cb80b10c-7c9f-4fba-869b-a9ba4668c0cd",
+    "keyword": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
+    "answer": "Si desea aqui puede adjuntar fotos\nDe lo contrario envíe \"0\" para continuar",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "2a04aa597077b409a48834d2ea854310",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "17daca5f-d0e0-4ed7-8ce2-581e0a835ea3",
+    "keyword": "2a04aa597077b409a48834d2ea854310",
+    "answer": "_event_voice_note__7a76fb1a-b2fb-4ce1-b40a-2e22331c6e26",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "7a3ba9dad51275421de10127c28ca828"
+  },
+  {
+    "ref": "ans_cb80b10c-7c9f-4fba-869b-a9ba4668c0cd",
+    "keyword": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
+    "answer": "Si desea aqui puede adjuntar fotos\nDe lo contrario envíe \"0\" para continuar",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "2a04aa597077b409a48834d2ea854310",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "a15d541a-d5d9-44ca-9345-d3116718c981",
+    "keyword": "2a04aa597077b409a48834d2ea854310",
+    "answer": "0",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "8f2014815c38046ebbfffe3ac4f3f41c"
+  },
+  {
+    "ref": "ans_cb80b10c-7c9f-4fba-869b-a9ba4668c0cd",
+    "keyword": "key_27ca9cb3-59e3-4eaf-bc8a-50d4dc96533e",
+    "answer": "Que nivel de urgencia le daria a este ticket\n1. Bajo\n2. Medio\n3. Alto",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "2a04aa597077b409a48834d2ea854310",
     "from": "5493515924253"
   }
 ]

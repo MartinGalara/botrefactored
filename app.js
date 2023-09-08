@@ -10,6 +10,7 @@ const { opMenuInicial } = require("./components/api/apiOpciones.js")
 
 const flujoInstructivos = require("./components/flows/flujoInstructivos.js")
 const flujoSoporte = require("./components/flows/flujoSoporte.js")
+const flujoDespachosCio = require("./components/flows/flujoDespachosCio.js")
 
 const flujoPrincipal = addKeyword("sigesbot")
     .addAnswer('Gracias por comunicarte con Sistema SIGES.',{}, async (ctx,{provider,endFlow}) => {
@@ -25,7 +26,7 @@ const flujoPrincipal = addKeyword("sigesbot")
 
         if(ctx.body !== '1' && ctx.body !== '2') return fallBack("Opcion invalida - Ingrese una opcion valida");
         
-    },[flujoInstructivos,flujoSoporte])
+    },[flujoDespachosCio])
 
 
 const main = async () => {

@@ -32,8 +32,8 @@ const flujoAplicaciones = addKeyword('1',{sensitive:true})
     const instructivos = await opcionesInstructivos(ctx.from);
     respuestaConDelay(ctx.from,provider,instructivos)
 })
-.addAnswer("Elija el instructivo que desea descargar",{capture:true},(ctx,{provider}) => {
-    sendFile(ctx.from,ctx.body,provider)
+.addAnswer("Elija el instructivo que desea descargar",{capture:true},async (ctx,{provider}) => {
+    await sendFile(ctx.from,ctx.body,provider)
 })
 
 module.exports = flujoAplicaciones
