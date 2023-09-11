@@ -140,7 +140,7 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
         default:
             break;
     }
-
+console.log("asd")
 }
 
 module.exports = flujoImpresoraFiscal
