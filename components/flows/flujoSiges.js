@@ -3,9 +3,9 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("../api/apiTickets")
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
-const flujoImpresoraFiscal = addKeyword('3',{sensitive:true})
-.addAnswer('Elija la opcion deseada\n1. Soporte para impresora fiscal\n2. Instalar una impresora fiscal',{capture:true}, async (ctx,{fallBack,provider}) => {
-
+const flujoSiges = addKeyword('5')
+.addAnswer(['Elija el origen del problema\n1. Facturación\n2. Cierre de turno\n3. Informes\n4. Otro'],{capture: true},async (ctx,{provider,fallBack}) => {
+    
     const i = getProp(ctx.from,'pregunta')
 
     const inc = await funcionPregunta(i,provider,ctx,fallBack)
@@ -17,13 +17,12 @@ const flujoImpresoraFiscal = addKeyword('3',{sensitive:true})
     if(pregunta) fallBack(pregunta)
 
 })
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 const sigPregunta = (orden) => {
 
     switch (orden) {
-        case 2: return 'Describa el problema por escrito o adjunte un AUDIO.\nSi conoce marca / modelo de impresora y/o si se encuentra conectada y con que tipo de cable, indiquelo.'
+        case 2: return 'Describa el problema por escrito o adjunte un AUDIO'
 
         case 3: return 'Si desea aqui puede adjuntar fotos\nDe lo contrario envíe "0" para continuar'
 
@@ -45,13 +44,20 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
         case 1:
             switch (ctx.body) {
                 case "1":
-                    ctx.body = "Soporte para impresora fiscal"
+                    ctx.body = "Facturación"
                     break;
                 case "2":
-                    ctx.body = "Instalar una impresora fiscal"
+                    ctx.body = "Cierre de turno"
                     break;
+                case "3":
+                    ctx.body = "Informes"
+                    await respuesta(ctx.from,provider,"En la siguiente seccion indicar en que tipo de informe ocurre el problema")
+                    break;
+                case "4":
+                    ctx.body = "Otro"
+                break;
             }
-            addProps(ctx.from,{type: ctx.body})
+            addProps(ctx.from,{type: ctx.body}) 
 
             return true
 
@@ -142,4 +148,4 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
     }
 }
 
-module.exports = flujoImpresoraFiscal
+module.exports = flujoSiges 

@@ -3,8 +3,8 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("../api/apiTickets")
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
-const flujoImpresoraFiscal = addKeyword('3',{sensitive:true})
-.addAnswer('Elija la opcion deseada\n1. Soporte para impresora fiscal\n2. Instalar una impresora fiscal',{capture:true}, async (ctx,{fallBack,provider}) => {
+const flujoServidor = addKeyword('7')
+.addAnswer('Describa el problema por escrito o adjunte un AUDIO',{capture:true}, async (ctx,{fallBack,provider}) => {
 
     const i = getProp(ctx.from,'pregunta')
 
@@ -23,15 +23,13 @@ const flujoImpresoraFiscal = addKeyword('3',{sensitive:true})
 const sigPregunta = (orden) => {
 
     switch (orden) {
-        case 2: return 'Describa el problema por escrito o adjunte un AUDIO.\nSi conoce marca / modelo de impresora y/o si se encuentra conectada y con que tipo de cable, indiquelo.'
+        case 2: return 'Si desea aqui puede adjuntar fotos\nDe lo contrario envíe "0" para continuar'
 
-        case 3: return 'Si desea aqui puede adjuntar fotos\nDe lo contrario envíe "0" para continuar'
+        case 3: return 'Que nivel de urgencia le daria a este ticket\n1. Bajo\n2. Medio\n3. Alto'
 
-        case 4: return 'Que nivel de urgencia le daria a este ticket\n1. Bajo\n2. Medio\n3. Alto'
+        case 4: return 'Elija la opcion deseada\n1. Enviar ticket\n2. Cancelar ticket'
 
-        case 5: return 'Elija la opcion deseada\n1. Enviar ticket\n2. Cancelar ticket'
-
-        case 6: return false
+        case 5: return false
     
         default:
             break;
@@ -43,19 +41,6 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
 
     switch (orden) {
         case 1:
-            switch (ctx.body) {
-                case "1":
-                    ctx.body = "Soporte para impresora fiscal"
-                    break;
-                case "2":
-                    ctx.body = "Instalar una impresora fiscal"
-                    break;
-            }
-            addProps(ctx.from,{type: ctx.body})
-
-            return true
-
-        case 2:
 
             let flag1
 
@@ -79,7 +64,7 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
 
             return flag1
 
-        case 3:
+        case 2:
 
             let flag2
 
@@ -97,7 +82,7 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
 
             return flag2
 
-        case 4:
+        case 3:
 
             switch (ctx.body) {
                 case "1":
@@ -118,7 +103,7 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
             addProps(ctx.from,{priority: ctx.body})
             return true
 
-        case 5:
+        case 4:
 
             if(ctx.body === '1') {
                 const ticket = await sendEmail(ctx.from)
@@ -140,6 +125,7 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
         default:
             break;
     }
+
 }
 
-module.exports = flujoImpresoraFiscal
+module.exports = flujoServidor

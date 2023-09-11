@@ -3,9 +3,9 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("../api/apiTickets")
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
-const flujoImpresoraFiscal = addKeyword('3',{sensitive:true})
-.addAnswer('Elija la opcion deseada\n1. Soporte para impresora fiscal\n2. Instalar una impresora fiscal',{capture:true}, async (ctx,{fallBack,provider}) => {
-
+const flujoImpresoraComun = addKeyword('4')
+.addAnswer(['Elija la opcion deseada\n1. Soporte para impresora\n2. Instalar una impresora'],{capture: true},async (ctx, {provider,fallBack}) => {
+    
     const i = getProp(ctx.from,'pregunta')
 
     const inc = await funcionPregunta(i,provider,ctx,fallBack)
@@ -17,13 +17,12 @@ const flujoImpresoraFiscal = addKeyword('3',{sensitive:true})
     if(pregunta) fallBack(pregunta)
 
 })
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 const sigPregunta = (orden) => {
 
     switch (orden) {
-        case 2: return 'Describa el problema por escrito o adjunte un AUDIO.\nSi conoce marca / modelo de impresora y/o si se encuentra conectada y con que tipo de cable, indiquelo.'
+        case 2: return 'Describa el problema por escrito o adjunte un AUDIO.\nSi conoce marca / modelo de impresora y/o si se encuentra conectada, indiquelo.'
 
         case 3: return 'Si desea aqui puede adjuntar fotos\nDe lo contrario envíe "0" para continuar'
 
@@ -45,10 +44,10 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
         case 1:
             switch (ctx.body) {
                 case "1":
-                    ctx.body = "Soporte para impresora fiscal"
+                    ctx.body = "Soporte para impresora"
                     break;
                 case "2":
-                    ctx.body = "Instalar una impresora fiscal"
+                    ctx.body = "Instalar una impresora"
                     break;
             }
             addProps(ctx.from,{type: ctx.body})
@@ -142,4 +141,4 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
     }
 }
 
-module.exports = flujoImpresoraFiscal
+module.exports = flujoImpresoraComun

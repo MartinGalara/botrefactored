@@ -11,6 +11,10 @@ const opcionesIncidentes = opMenuProblemas('array').join('\n');
 const flujoDespachosCio = require("./flujoDespachosCio")
 const flujoAplicaciones = require("./flujoAplicaciones")
 const flujoImpresoraFiscal = require("./flujoImpresoraFiscal")
+const flujoImpresoraComun = require("./flujoImpresoraComun")
+const flujoSiges = require("./flujoSiges")
+const flujoLibroIva = require("./flujoLibroIva")
+const flujoServidor = require("./flujoServidor")
 
 const flujoSoporte = addKeyword("2",{sensitive:true})
 .addAnswer(["Elija desde donde necesita soporte","1. YPF","2. SHELL","3. AXION","4. PUMA","5. GULF","6. REFINOR","7. EST. BLANCA","8. OTRO"],{capture:true},(ctx,{fallBack}) => {
@@ -77,6 +81,6 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
     addProps(ctx.from,{problem: ctx.body}) 
     addProps(ctx.from,{pregunta: 1}) 
 
-},[flujoDespachosCio,flujoAplicaciones,flujoImpresoraFiscal])
+},[flujoDespachosCio,flujoAplicaciones,flujoImpresoraFiscal,flujoImpresoraComun,flujoSiges,flujoLibroIva,flujoServidor])
 
 module.exports = flujoSoporte
