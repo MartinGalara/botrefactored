@@ -39,16 +39,20 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
 
     const user = await validateUserID(ctx.from,ctx.body)
 
-    user === false && fallBack("Numero invalido - Ingrese nuevamente - Para volver envie la palabra *salir*")
+    if(user){
 
-    addProps(ctx.from,{id: ctx.body})
-    addProps(ctx.from,{phone: ctx.from})
+        addProps(ctx.from,{id: ctx.body})
+        addProps(ctx.from,{phone: ctx.from})
 
-    await computers(ctx.from)
+        await computers(ctx.from)
 
-    const pcs = computerOptions(ctx.from);
+        const pcs = computerOptions(ctx.from);
 
-    respuestaConDelay(ctx.from,provider,pcs)
+        respuestaConDelay(ctx.from,provider,pcs)
+
+    }else{
+        fallBack("Ingrese una ID valida - Para salir envie la palabra *salir*")
+    }
 
 })
 .addAnswer("Verificando",{capture:true},(ctx,{fallBack}) => {
