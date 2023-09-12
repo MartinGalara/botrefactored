@@ -6,6 +6,8 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+//const { validateUserID } = require("./apiUsuarios")
+
 let ticket = {}
 
 const addProps = (from,props) => {
@@ -16,6 +18,8 @@ const addProps = (from,props) => {
       ticket[from] = {}
       Object.assign(ticket[from], props);
     }
+
+    console.log(ticket)
 }
 
 const getProp = (from,prop) => {
@@ -265,4 +269,14 @@ const getStaff = async (from) => {
   
 }
 
-module.exports = { addProps,getProp,deleteTicketData,getInstructivo,getBandera,computerInfo,addAudio,addImage,incPregunta,sendEmail }
+const sendSosTicket = async (from) => {
+
+  const userId = ticket[from].creds.userId
+
+  const newTicket = await createTicket(userId)
+
+  await validateUserID(from,userId)
+
+}
+
+module.exports = { addProps,getProp,deleteTicketData,getInstructivo,getBandera,computerInfo,addAudio,addImage,incPregunta,sendEmail,sendSosTicket }

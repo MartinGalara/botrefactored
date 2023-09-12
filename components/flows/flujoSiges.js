@@ -3,12 +3,12 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("../api/apiTickets")
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
-const flujoSiges = addKeyword('5')
+const flujoSiges = addKeyword('5',{sensitive:true})
 .addAnswer(['Elija el origen del problema\n1. Facturación\n2. Cierre de turno\n3. Informes\n4. Otro'],{capture: true},async (ctx,{provider,fallBack}) => {
     
     const i = getProp(ctx.from,'pregunta')
 
-    const inc = await funcionPregunta(i,provider,ctx,fallBack)
+    const inc = await funcionPregunta(i,provider,ctx)
  
     inc === true && incPregunta(ctx.from);
 
@@ -38,7 +38,7 @@ const sigPregunta = (orden) => {
 
 }
 
-const funcionPregunta = async (orden,provider,ctx,endFlow) => {
+const funcionPregunta = async (orden,provider,ctx) => {
 
     switch (orden) {
         case 1:

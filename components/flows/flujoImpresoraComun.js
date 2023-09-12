@@ -3,12 +3,12 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("../api/apiTickets")
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
-const flujoImpresoraComun = addKeyword('4')
+const flujoImpresoraComun = addKeyword('4',{sensitive:true})
 .addAnswer(['Elija la opcion deseada\n1. Soporte para impresora\n2. Instalar una impresora'],{capture: true},async (ctx, {provider,fallBack}) => {
     
     const i = getProp(ctx.from,'pregunta')
 
-    const inc = await funcionPregunta(i,provider,ctx,fallBack)
+    const inc = await funcionPregunta(i,provider,ctx)
  
     inc === true && incPregunta(ctx.from);
 
@@ -38,7 +38,7 @@ const sigPregunta = (orden) => {
 
 }
 
-const funcionPregunta = async (orden,provider,ctx,endFlow) => {
+const funcionPregunta = async (orden,provider,ctx) => {
 
     switch (orden) {
         case 1:

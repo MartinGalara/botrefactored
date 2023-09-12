@@ -3,33 +3,38 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const { addProps,getProp,deleteTicketData } = require("./apiTickets.js")
+const { addProps,getProp,deleteTicketData } = require("./apiTickets.js");
 
 const validateUser = async (from) => {
 
     const config = {
         method: 'get',
-        url: `${process.env.SERVER_URL}/vipusers?phone=${from}`,
+        url: `${process.env.SERVER_URL}/botusers?phone=${from}`,
     }
     
-    const vipuser = await axios(config)
+    const botuser = await axios(config)
 
     let resultado
     
-    vipuser.data.length ? resultado = true : resultado = false
+    botuser.data.length ? resultado = true : resultado = false
 
-    vipuser.data.length && deleteTicketData(from)
-    vipuser.data.length && addProps(from,{vipuser: vipuser.data[0]})
-    
+    if(resultado){
+
+    deleteTicketData(from)
+    addProps(from,{creds: {
+        createUser: botuser.data[0].createUser,
+        canSOS: botuser.data[0].canSOS,
+        adminPdf: botuser.data[0].adminPdf,
+        userId: botuser.data[0].userId
+    }})
+
+    }
+
     return resultado
 
 }
 
-const validateUserID = async (from,id) => {
-
-    const bandera = getProp(from,'bandera')
-
-    const fullId = bandera + id
+const validateUserID = async (from,fullId) => {
     
     addProps(from,{userId: fullId})
     

@@ -8,7 +8,7 @@ const flujoDespachosCio = addKeyword('1',{sensitive:true})
 
     const i = getProp(ctx.from,'pregunta')
 
-    const inc = await funcionPregunta(i,provider,ctx,fallBack)
+    const inc = await funcionPregunta(i,provider,ctx)
  
     inc === true && incPregunta(ctx.from);
 
@@ -37,7 +37,7 @@ const sigPregunta = (orden) => {
 
 }
 
-const funcionPregunta = async (orden,provider,ctx,endFlow) => {
+const funcionPregunta = async (orden,provider,ctx) => {
 
     switch (orden) {
         case 1:

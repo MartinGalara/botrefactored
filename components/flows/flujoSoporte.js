@@ -37,7 +37,11 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
 
     if(ctx.body.toLowerCase() === "salir") return endFlow('Escriba *sigesbot* para volver a comenzar')
 
-    const user = await validateUserID(ctx.from,ctx.body)
+    const bandera = getProp(ctx.from,'bandera')
+
+    const fullId = bandera + ctx.body
+
+    const user = await validateUserID(ctx.from,fullId)
 
     if(user){
 

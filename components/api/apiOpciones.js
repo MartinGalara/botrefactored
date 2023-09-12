@@ -4,13 +4,24 @@ const path = require('path');
 const { addProps, getProp } = require("./apiTickets.js")
 
 const opMenuInicial = (from) => {
+    const creds = getProp(from, 'creds');
+    let options = "";
 
-    const credenciales = getProp(from,'vipuser')
+    if (creds.canSOS) {
+        options += "0. Generar un ticket *SOS*\n";
+    }
 
-    // aca va logica para renderizar distintas opciones en el menu inicial
+    options += "1. Descargar un instructivo\n";
 
-    return "1. Descargar un instructivo\n2. Generar un ticket de soporte\n3. Salir"
+    options += "2. Generar un ticket de soporte\n";
+
+    if (creds.createUser) {
+        options += "3. Dar de alta nuevo usuario";
+    }
+
+    return options.trim(); // Eliminar espacios en blanco adicionales al final
 }
+
 
 const opMenuInstructivos = (from) => {
 

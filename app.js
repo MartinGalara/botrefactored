@@ -7,26 +7,72 @@ const JsonFileAdapter = require('@bot-whatsapp/database/json')
 const { respuestaConDelay } = require("./components/api/apiMensajes.js")
 const { validateUser } = require("./components/api/apiUsuarios.js")
 const { opMenuInicial } = require("./components/api/apiOpciones.js")
+const { getProp,addProps } = require("./components/api/apiTickets.js")
 
 const flujoInstructivos = require("./components/flows/flujoInstructivos.js")
 const flujoSoporte = require("./components/flows/flujoSoporte.js")
-const flujoDespachosCio = require("./components/flows/flujoDespachosCio.js")
+const flujoSOS = require("./components/flows/flujoSOS.js")
 
 const flujoPrincipal = addKeyword("sigesbot")
-    .addAnswer('Gracias por comunicarte con Sistema SIGES.',{}, async (ctx,{provider,endFlow,fallBack,flowDynamic,goToFlow}) => {
+    .addAnswer('Gracias por comunicarte con Sistema SIGES.',{}, async (ctx,{provider,endFlow}) => {
 
         const user = await validateUser(ctx.from)
         if(!user) return endFlow("Este numero de telefono no esta dado de alta, solicite que le den el alta para usar el bot")
         const opciones = opMenuInicial(ctx.from)
-        respuestaConDelay(ctx.from,provider,opciones)
+        await respuestaConDelay(ctx.from,provider,opciones)
+        await respuestaConDelay(ctx.from,provider,"O envie *salir* para finalizar la conversacion")
     })
     .addAnswer('Elija la opcion deseada',{capture:true},async (ctx,{endFlow,fallBack}) => {
-        
-        if(ctx.body === '3') return endFlow({body: `Escriba "sigesbot" para volver a comenzar`})
 
-        if(ctx.body !== '1' && ctx.body !== '2') return fallBack("Opcion invalida - Ingrese una opcion valida");
+        if (ctx.body === 'salir') return endFlow({ body: `Escriba *sigesbot* para volver a comenzar` });
+
+        const creds = getProp(ctx.from, 'creds');
         
-    },[flujoInstructivos,flujoSoporte])
+        const validOptions = {
+            '1': true,
+            '2': true,
+            '3': creds.createUser,
+            '0': creds.canSOS,
+        };
+
+        if (!validOptions[ctx.body]) {
+        return endFlow({ body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar" });
+        }
+
+        if(ctx.body === "0") addProps(ctx.from,{pregunta: 1})
+
+       /*  if(ctx.body === 'salir') return endFlow({body: `Escriba *sigesbot* para volver a comenzar`})
+
+        const creds = getProp(ctx.from,'creds')
+
+        switch (true) {
+            case !creds.canSOS && !creds.createUser:
+                
+                if(ctx.body !== '1' && ctx.body !== '2') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
+                
+                break;
+            
+            case creds.canSOS && !creds.createUser:
+
+                if(ctx.body !== '1' && ctx.body !== '2' && ctx.body !== '0') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
+                
+                break;
+
+            case !creds.canSOS && creds.createUser:
+
+                if(ctx.body !== '1' && ctx.body !== '2' && ctx.body !== '3') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
+                
+                break;
+
+            case creds.canSOS && creds.createUser:
+
+                if(ctx.body !== '1' && ctx.body !== '2' && ctx.body !== '3' && ctx.body !== '0') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
+                
+                break;
+        
+        } */
+        
+    },[flujoInstructivos,flujoSoporte,flujoSOS])
 
 
 const main = async () => {
