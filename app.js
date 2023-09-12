@@ -40,37 +40,7 @@ const flujoPrincipal = addKeyword("sigesbot")
         }
 
         if(ctx.body === "0") addProps(ctx.from,{pregunta: 1})
-
-       /*  if(ctx.body === 'salir') return endFlow({body: `Escriba *sigesbot* para volver a comenzar`})
-
-        const creds = getProp(ctx.from,'creds')
-
-        switch (true) {
-            case !creds.canSOS && !creds.createUser:
-                
-                if(ctx.body !== '1' && ctx.body !== '2') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
-                
-                break;
-            
-            case creds.canSOS && !creds.createUser:
-
-                if(ctx.body !== '1' && ctx.body !== '2' && ctx.body !== '0') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
-                
-                break;
-
-            case !creds.canSOS && creds.createUser:
-
-                if(ctx.body !== '1' && ctx.body !== '2' && ctx.body !== '3') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
-                
-                break;
-
-            case creds.canSOS && creds.createUser:
-
-                if(ctx.body !== '1' && ctx.body !== '2' && ctx.body !== '3' && ctx.body !== '0') return endFlow({body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar"})
-                
-                break;
-        
-        } */
+        if(ctx.body === "2") addProps(ctx.from,{flagUsers: 1})
         
     },[flujoInstructivos,flujoSoporte,flujoSOS])
 

@@ -2,7 +2,7 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 
 const { banderaElegida,zonaElegida } = require('../api/apiSoporte')
 const { respuesta,respuestaConDelay } = require('../api/apiMensajes')
-const { addProps,getProp,getBandera,computerInfo } = require('../api/apiTickets')
+const { addProps,getProp,getBandera,computerInfo,incFlagUsers,getUsers } = require('../api/apiTickets')
 const { validateUserID,computers } = require('../api/apiUsuarios')
 const { computerOptions,opMenuProblemas } = require('../api/apiOpciones')
 
@@ -17,46 +17,17 @@ const flujoLibroIva = require("./flujoLibroIva")
 const flujoServidor = require("./flujoServidor")
 
 const flujoSoporte = addKeyword("2",{sensitive:true})
-.addAnswer(["Elija desde donde necesita soporte","1. YPF","2. SHELL","3. AXION","4. PUMA","5. GULF","6. REFINOR","7. EST. BLANCA","8. OTRO"],{capture:true},(ctx,{fallBack}) => {
-    
-    const flag = banderaElegida(ctx.from,ctx.body)
+.addAnswer("Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion",{capture:true},async (ctx,{provider,fallBack}) => {
 
-    flag === false && fallBack()
+    const i = getProp(ctx.from,'flagUsers')
 
-})
-.addAnswer(["Elija en que area se encuentra el puesto de trabajo donde necesita soporte","1. Playa","2. Tienda","3. Boxes","4. Administracion"],{capture:true},async (ctx,{provider}) => {
+    const inc = await funcionPregunta(i,provider,ctx)
+ 
+    inc === true && incFlagUsers(ctx.from);
 
-    const flag = zonaElegida(ctx.from,ctx.body)
+    const pregunta = sigPregunta(getProp(ctx.from,'flagUsers'))
 
-    flag === false && fallBack()
-
-    await respuesta(ctx.from,provider,getBandera(ctx.from))
-
-})
-.addAnswer('Si no lo conoce, solicitarlo a un operador de SIGES',{capture:true},async (ctx,{fallBack,endFlow,provider}) => {
-
-    if(ctx.body.toLowerCase() === "salir") return endFlow('Escriba *sigesbot* para volver a comenzar')
-
-    const bandera = getProp(ctx.from,'bandera')
-
-    const fullId = bandera + ctx.body
-
-    const user = await validateUserID(ctx.from,fullId)
-
-    if(user){
-
-        addProps(ctx.from,{id: ctx.body})
-        addProps(ctx.from,{phone: ctx.from})
-
-        await computers(ctx.from)
-
-        const pcs = computerOptions(ctx.from);
-
-        respuestaConDelay(ctx.from,provider,pcs)
-
-    }else{
-        fallBack("Ingrese una ID valida - Para salir envie la palabra *salir*")
-    }
+    if(pregunta) fallBack(pregunta)
 
 })
 .addAnswer("Verificando",{capture:true},(ctx,{fallBack}) => {
@@ -90,5 +61,76 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
     addProps(ctx.from,{pregunta: 1}) 
 
 },[flujoDespachosCio,flujoAplicaciones,flujoImpresoraFiscal,flujoImpresoraComun,flujoSiges,flujoLibroIva,flujoServidor])
+
+
+const sigPregunta = (orden) => {
+
+    switch (orden) {
+
+        case 1: return "Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion"
+
+        case 2: return "Indique para que estación necesita soporte"
+    
+        default:
+
+            return false
+
+    }
+
+}
+
+const funcionPregunta = async (orden,provider,ctx,endFlow) => {
+
+    switch (orden) {
+        
+        case 1:
+
+            const flag = zonaElegida(ctx.from,ctx.body)
+
+            if(!flag) return false
+            else{
+                const opciones = getUsers(ctx.from)
+                if(!opciones){
+
+                    addProps(ctx.from,{flagUsers: 100})
+
+                    await computers(ctx.from)
+
+                    const pcs = computerOptions(ctx.from);
+
+                    respuestaConDelay(ctx.from,provider,pcs)
+
+                    return true
+                }
+                else{
+                    respuestaConDelay(ctx.from,provider,opciones)
+                    return true
+                }
+            }
+
+        case 2:
+
+            const cantidad = getProp(ctx.from,'users')
+
+            if(ctx.body > 0 && ctx.body <= cantidad.length){
+
+                addProps(ctx.from,{selectedUser: cantidad[ctx.body-1]})
+
+                await computers(ctx.from)
+
+                const pcs = computerOptions(ctx.from);
+
+                respuestaConDelay(ctx.from,provider,pcs)
+
+                return true
+            }
+            else{
+                const opciones = getUsers(ctx.from)
+                respuestaConDelay(ctx.from,provider,opciones)
+                return false
+            }
+    
+    }
+}
 
 module.exports = flujoSoporte

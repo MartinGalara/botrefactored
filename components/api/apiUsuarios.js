@@ -27,6 +27,8 @@ const validateUser = async (from) => {
         adminPdf: botuser.data[0].adminPdf,
         userId: botuser.data[0].userId
     }})
+    addProps(from,{users:botuser.data[0].users})
+    addProps(from,{phone: from})
 
     }
 
@@ -59,8 +61,10 @@ const validateUserID = async (from,fullId) => {
 
 const computers = async (from) => {
 
-    const userId = getProp(from,'userId')
+    const userId = getProp(from,'selectedUser').id
     const zone = getProp(from,'zone')
+
+    console.log(userId)
   
     const config = {
         method: 'get',

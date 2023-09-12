@@ -131,15 +131,23 @@ const incPregunta = (from) => {
 
 }
 
+const incFlagUsers = (from) => {
+
+  ticket[from].flagUsers = ticket[from].flagUsers + 1
+
+}
+
 const sendEmail = async (from) => {
 
-  const newTicket = await createTicket(ticket[from].userId)
+  const selectedUser = ticket[from].selectedUser
+
+  const newTicket = await createTicket(selectedUser.id)
 
   await getStaff(from)
 
   let reciever = ""
 
-  ticket[from].testing === true ? reciever = process.env.TESTINGMAIL : reciever = process.env.RECIEVER
+  selectedUser.testing === true ? reciever = process.env.TESTINGMAIL : reciever = process.env.RECIEVER
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -153,11 +161,11 @@ const sendEmail = async (from) => {
 
   let replyTo = ticket[from].staff.mails.join(', ')
 
-  if(ticket[from].vipmail){
+  if(selectedUser.vipmail){
     if(replyTo === ''){
-      replyTo = ticket[from].vipmail
+      replyTo = selectedUser.vipmail
     }else{
-      replyTo = replyTo + ', ' + ticket[from].vipmail
+      replyTo = replyTo + ', ' + selectedUser.vipmail
     }
   }
 
@@ -165,8 +173,8 @@ const sendEmail = async (from) => {
     from: `"WT ${newTicket.id}" <${process.env.SENDER}>`, // sender address
     to: reciever, // list of receivers
     cc: replyTo,
-    subject: `WT ${newTicket.id} | ${ticket[from].info} | Soporte para ${ticket[from].problem} | ${ticket[from].pf}`, // Subject line
-    text: `WT ${newTicket.id} | ${ticket[from].info} | Soporte para ${ticket[from].problem} | ${ticket[from].pf}`, // plain text body
+    subject: `WT ${newTicket.id} | ${selectedUser.info} | Soporte para ${ticket[from].problem} | ${ticket[from].pf}`, // Subject line
+    text: `WT ${newTicket.id} | ${selectedUser.info} | Soporte para ${ticket[from].problem} | ${ticket[from].pf}`, // plain text body
     replyTo: replyTo
   }
 
@@ -178,8 +186,8 @@ const sendEmail = async (from) => {
 <div>
   <p>Datos del ticket</p>
   <p>Soporte para: ${ticket[from].problem}</p>
-  <p>ID Cliente: ${ticket[from].userId}</p>
-  <p>Info Cliente: ${ticket[from].info}</p>
+  <p>ID Cliente: ${selectedUser.id}</p>
+  <p>Info Cliente: ${selectedUser.info}</p>
   <p>Teléfono que generó el ticket: ${ticket[from].phone}</p>
   <p>Punto de facturación / PC: ${ticket[from].pf}</p>
   <p>ID TeamViewer: ${ticket[from].tv}</p>
@@ -245,7 +253,7 @@ const getStaff = async (from) => {
 
   const config = {
     method: 'get',
-    url: `${process.env.SERVER_URL}/staffs?userId=${ticket[from].userId}`,
+    url: `${process.env.SERVER_URL}/staffs?userId=${ticket[from].selectedUser.id}`,
   }
 
   const staff = await axios(config).then((i) => i.data)
@@ -279,4 +287,17 @@ const sendSosTicket = async (from) => {
 
 }
 
-module.exports = { addProps,getProp,deleteTicketData,getInstructivo,getBandera,computerInfo,addAudio,addImage,incPregunta,sendEmail,sendSosTicket }
+const getUsers = (from) => {
+
+  if(ticket[from].users.length === 1) {
+    addProps(from,{selectedUser: ticket[from].users[0]})
+    return false
+  }
+  else{
+    const usersString = ticket[from].users.map((user, index) => `${index + 1}. ${user.info}`).join('\n');
+    return usersString;
+  }
+  
+}
+
+module.exports = { addProps,getProp,deleteTicketData,getInstructivo,getBandera,computerInfo,addAudio,addImage,incPregunta,sendEmail,sendSosTicket,incFlagUsers,getUsers }
