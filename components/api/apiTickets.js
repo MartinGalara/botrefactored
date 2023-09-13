@@ -6,8 +6,6 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-//const { validateUserID } = require("./apiUsuarios")
-
 let ticket = {}
 
 const addProps = (from,props) => {
@@ -143,7 +141,7 @@ const sendEmail = async (from) => {
 
   const newTicket = await createTicket(selectedUser.id)
 
-  await getStaff(from)
+  await getManagers(from,selectedUser.id)
 
   let reciever = ""
 
@@ -159,15 +157,15 @@ const sendEmail = async (from) => {
     },
   });
 
-  let replyTo = ticket[from].staff.mails.join(', ')
+  const allEmails = []
 
-  if(selectedUser.vipmail){
-    if(replyTo === ''){
-      replyTo = selectedUser.vipmail
-    }else{
-      replyTo = replyTo + ', ' + selectedUser.vipmail
-    }
-  }
+  ticket[from].selectedUser.email.map( e => allEmails.push(e))
+
+  ticket[from].sendEmail.map( e => allEmails.push(e))
+
+  if(selectedUser.vipmail) allEmails.push(selectedUser.vipmail)
+
+  const replyTo = allEmails.join(', ')
 
   let data = {
     from: `"WT ${newTicket.id}" <${process.env.SENDER}>`, // sender address
@@ -249,41 +247,88 @@ const createTicket = async (userId) => {
 
 }
 
-const getStaff = async (from) => {
+const getManagers = async (from,id) => {
 
   const config = {
     method: 'get',
-    url: `${process.env.SERVER_URL}/staffs?userId=${ticket[from].selectedUser.id}`,
+    url: `${process.env.SERVER_URL}/clients?id=${id}`,
   }
 
-  const staff = await axios(config).then((i) => i.data)
+  const managers = await axios(config).then((i) => i.data)
 
-  ticket[from].staff = {}
-  ticket[from].staff.mails = []
-  ticket[from].staff.phones = []
+  ticket[from].sendEmail = []
+  ticket[from].sendMessage = []
 
-  const mails = []
-  const phones = []
-
-  staff.map( e => {
-    if(e.zone === null || e.zone === ticket[from].zone) {
-      mails.push(e.email)
-      phones.push(e.phone)
+  managers.botusers.forEach((botuser) => {
+    if (botuser.manager === true) {
+      if ((botuser.email && botuser.area === ticket[from].zone) || botuser.area === "G") {
+        ticket[from].sendEmail.push(botuser.email);
+      }
+      if (botuser.area === ticket[from].zone || botuser.area === "G") {
+        ticket[from].sendMessage.push(botuser.phone);
+      }
     }
-  })
+  });
 
-  ticket[from].staff.mails = mails
-  ticket[from].staff.phones = phones
+  console.log(ticket)
   
 }
 
 const sendSosTicket = async (from) => {
 
-  const userId = ticket[from].creds.userId
+  const selectedUser = ticket[from].selectedUser
 
-  const newTicket = await createTicket(userId)
+  const newTicket = await createTicket(selectedUser.id)
 
-  await validateUserID(from,userId)
+  await getManagers(from,selectedUser.id)
+
+  let reciever = ""
+
+  selectedUser.testing === true ? reciever = process.env.TESTINGMAIL : reciever = process.env.RECIEVER
+
+  let transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: process.env.SENDER, // generated ethereal user
+      pass: process.env.GMAIL_PASS, // generated ethereal password
+    },
+  });
+
+  const allEmails = []
+
+  ticket[from].selectedUser.email.map( e => allEmails.push(e))
+
+  ticket[from].sendEmail.map( e => allEmails.push(e))
+
+  if(selectedUser.vipmail) allEmails.push(selectedUser.vipmail)
+
+  const replyTo = allEmails.join(', ')
+  let data = {
+    from: `"WT ${newTicket.id}" <${process.env.SENDER}>`, // sender address
+    to: reciever, // list of receivers
+    cc: replyTo,
+    subject: `WT ${newTicket.id} | *TICKET SOS* | ${selectedUser.info}`, // Subject line
+    text: `WT ${newTicket.id} | *TICKET SOS* | ${selectedUser.info}`, // plain text body
+    replyTo: replyTo
+  }
+
+  data.html = `
+  <div>
+  <p>Datos del ticket</p>
+  <p>ID Cliente: ${selectedUser.id}</p>
+  <p>Info Cliente: ${selectedUser.info}</p>
+  <p>Teléfono que generó el ticket: ${ticket[from].phone}</p>
+  <p>Urgencia indicada por el cliente: SOS - URGENTE</p>
+  </div>
+  `;
+
+  const mail = await transporter.sendMail(data);
+
+  console.log(ticket)
+
+  return newTicket.id
 
 }
 

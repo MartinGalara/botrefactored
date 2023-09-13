@@ -41,29 +41,44 @@ const sendMessages = async (from,provider) => {
         break;
     }
 
-    console.log(zone)
-
-    const ejecutivo = getProp(from,'vip')
+    const cliente = getProp(from,'selectedUser')
   
-    if(ejecutivo){
+    if(cliente.vip){
         
       await respuesta(from,provider,`Tu ejecutivo de cuenta ya fue notificado del problema`)
   
-      await respuesta(ejecutivo,provider,`El cliente ${getProp(from,'info')} genero un ticket pidiendo soporte para ${zone} - ${getProp(from,'problem')}. Nivel de urgencia: ${getProp(from,'priority')}`)
+      await respuesta(cliente.vip,provider,`El cliente ${cliente.info} genero un ticket pidiendo soporte para ${zone} - ${getProp(from,'problem')}. Nivel de urgencia: ${getProp(from,'priority')}`)
     }
 
-    const staff = getProp(from,'staff')
+    const managers = getProp(from,'sendMessage')
   
-    for (let i = 0; i < staff.phones.length;   i++) {
-      
-      if(staff.phones[i]){
-      await respuesta(staff.phones[i],provider,`Se genero un ticket pidiendo soporte para ${zone} - ${getProp(from,'problem')}. Nivel de urgencia: ${getProp(from,'priority')}`)
-      }
-  
+    for (let i = 0; i < managers.length; i++) {
+      await respuesta(managers[i],provider,`Se genero un ticket pidiendo soporte para ${zone} - ${getProp(from,'problem')}. Nivel de urgencia: ${getProp(from,'priority')}`)
     }
   
     deleteTicketData(from)
   
   }
 
-module.exports = {respuesta,respuestaConDelay,sendMessages}
+  const sendSOSMessages = async (from,provider) => {
+  
+    const cliente = getProp(from,'selectedUser')
+  
+    if(cliente.vip){
+        
+      await respuesta(from,provider,`Tu ejecutivo de cuenta ya fue notificado del problema`)
+  
+      await respuesta(cliente.vip,provider,`El cliente ${cliente.info} genero un ticket *SOS* - Opcion "0" del bot`)
+    }
+
+    const managers = getProp(from,'sendMessage')
+  
+    for (let i = 0; i < managers.length; i++) {
+      await respuesta(managers[i],provider,`Se genero un ticket *SOS* - Nivel de urgencia: Muy Alto`)
+    }
+  
+    deleteTicketData(from)
+  
+  }
+
+module.exports = {respuesta,respuestaConDelay,sendMessages,sendSOSMessages}

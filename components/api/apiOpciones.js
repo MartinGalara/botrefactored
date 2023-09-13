@@ -16,8 +16,10 @@ const opMenuInicial = (from) => {
     options += "2. Generar un ticket de soporte\n";
 
     if (creds.createUser) {
-        options += "3. Dar de alta nuevo usuario";
+        options += "3. Dar de alta nuevo usuario\n";
     }
+
+    options += "O envie *salir* para finalizar la conversacion\n";
 
     return options.trim(); // Eliminar espacios en blanco adicionales al final
 }

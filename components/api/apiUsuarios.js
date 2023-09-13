@@ -25,9 +25,9 @@ const validateUser = async (from) => {
         createUser: botuser.data[0].createUser,
         canSOS: botuser.data[0].canSOS,
         adminPdf: botuser.data[0].adminPdf,
-        userId: botuser.data[0].userId
+        id: botuser.data[0].id
     }})
-    addProps(from,{users:botuser.data[0].users})
+    addProps(from,{users:botuser.data[0].clients})
     addProps(from,{phone: from})
 
     }
@@ -38,11 +38,11 @@ const validateUser = async (from) => {
 
 const validateUserID = async (from,fullId) => {
     
-    addProps(from,{userId: fullId})
+    addProps(from,{id: fullId})
     
       const config = {
         method: 'get',
-        url: `${process.env.SERVER_URL}/users?id=${fullId}`,
+        url: `${process.env.SERVER_URL}/clients?id=${fullId}`,
     }
     
       const user = await axios(config)

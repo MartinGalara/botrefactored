@@ -65,7 +65,6 @@ const funcionPregunta = async (orden,provider,ctx) => {
             let flag1
 
             if(ctx.message.hasOwnProperty('audioMessage')){
-                console.log("entre aca")
               addAudio(ctx.from,ctx)
               addProps(ctx.from,{description: "Audio adjuntado"}) 
               flag1 = true;

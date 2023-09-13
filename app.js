@@ -20,7 +20,6 @@ const flujoPrincipal = addKeyword("sigesbot")
         if(!user) return endFlow("Este numero de telefono no esta dado de alta, solicite que le den el alta para usar el bot")
         const opciones = opMenuInicial(ctx.from)
         await respuestaConDelay(ctx.from,provider,opciones)
-        await respuestaConDelay(ctx.from,provider,"O envie *salir* para finalizar la conversacion")
     })
     .addAnswer('Elija la opcion deseada',{capture:true},async (ctx,{endFlow,fallBack}) => {
 
