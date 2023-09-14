@@ -345,4 +345,47 @@ const getUsers = (from) => {
   
 }
 
-module.exports = { addProps,getProp,deleteTicketData,getInstructivo,getBandera,computerInfo,addAudio,addImage,incPregunta,sendEmail,sendSosTicket,incFlagUsers,getUsers }
+const newUserProps = (from,props) => {
+
+    Object.assign(ticket[from].newBotuser, props);
+  
+}
+
+const newUserInfo = (from) => {
+  const newUser = ticket[from].newBotuser;
+
+  // Mapear el valor de 'area' a la palabra completa correspondiente
+  const areaMapping = {
+    'P': 'Playa',
+    'T': 'Tienda',
+    'B': 'Boxes',
+    'A': 'Administracion',
+  };
+
+  // Crear un objeto con los datos formateados
+  const formattedData = {
+    Nombre: newUser.name,
+    Telefono: newUser.phone,
+    'Alta de Usuarios': newUser.createUser ? 'SI' : 'NO',
+    'Ver Instructivos Admin/Contable': newUser.adminPdf ? 'SI' : 'NO',
+    'Generar Ticket SOS': newUser.canSOS ? 'SI' : 'NO',
+    Encargado: newUser.manager ? 'SI' : 'NO',
+    Area: newUser.manager ? areaMapping[newUser.area] : undefined,
+    Correo: newUser.manager ? newUser.email : undefined,
+  };
+
+  // Crear el string formateado
+  let result = 'Datos Nuevo Usuario\n';
+  for (const [key, value] of Object.entries(formattedData)) {
+    if (value !== undefined) {
+      result += `${key}: ${value}\n`;
+    }
+  }
+
+  result += `\nIndique la opcion correcta\n1. Confirmar nuevo usuario\n2. Cancelar`;
+
+  return result;
+};
+
+
+module.exports = { newUserInfo,newUserProps,addProps,getProp,deleteTicketData,getInstructivo,getBandera,computerInfo,addAudio,addImage,incPregunta,sendEmail,sendSosTicket,incFlagUsers,getUsers }

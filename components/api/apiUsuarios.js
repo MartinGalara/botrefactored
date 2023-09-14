@@ -95,4 +95,20 @@ const computers = async (from) => {
       
 }
 
-module.exports = { validateUser,validateUserID,computers }
+const altaBotuser = async (from) => {
+
+    const newBotuser = getProp(from,'newBotuser')
+  
+    const config = {
+        method: 'post',
+        url: `${process.env.SERVER_URL}/botusers`,
+        data:newBotuser
+      }
+      
+    const result = await axios(config).then((i) => i.data)
+
+    console.log(result)
+
+}
+
+module.exports = { altaBotuser,validateUser,validateUserID,computers }

@@ -12,6 +12,7 @@ const { getProp,addProps } = require("./components/api/apiTickets.js")
 const flujoInstructivos = require("./components/flows/flujoInstructivos.js")
 const flujoSoporte = require("./components/flows/flujoSoporte.js")
 const flujoSOS = require("./components/flows/flujoSOS.js")
+const flujoAltaBotuser = require("./components/flows/flujoAltaBotuser.js")
 
 const flujoPrincipal = addKeyword("sigesbot")
     .addAnswer('Gracias por comunicarte con Sistema SIGES.',{}, async (ctx,{provider,endFlow}) => {
@@ -38,10 +39,10 @@ const flujoPrincipal = addKeyword("sigesbot")
         return endFlow({ body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar" });
         }
 
-        if(ctx.body === "0") addProps(ctx.from,{pregunta: 1})
+        if(ctx.body === "0" || ctx.body === "3") addProps(ctx.from,{pregunta: 1})
         if(ctx.body === "2") addProps(ctx.from,{flagUsers: 1})
         
-    },[flujoInstructivos,flujoSoporte,flujoSOS])
+    },[flujoInstructivos,flujoSoporte,flujoSOS,flujoAltaBotuser])
 
 
 const main = async () => {
