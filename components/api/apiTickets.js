@@ -361,6 +361,7 @@ const newUserInfo = (from) => {
     'T': 'Tienda',
     'B': 'Boxes',
     'A': 'Administracion',
+    'G': 'Global',
   };
 
   // Crear un objeto con los datos formateados
