@@ -27,11 +27,19 @@ const opMenuInicial = (from) => {
 
 const opMenuInstructivos = (from) => {
 
-    const credenciales = getProp(from,'vipuser')
+    const creds = getProp(from,'creds')
 
-    // aca va logica para renderizar distintas opciones del menu de instructivos
+    let options = "";
 
-    return "1. Operación Playa\n2. Operación Tienda\n3. Admin - Contable"
+    options += "1. Operación Playa\n";
+
+    options += "2. Operación Tienda\n";
+
+    if (creds.adminPdf) {
+        options += "3. Admin - Contable";
+    }
+
+    return options.trim(); // Eliminar espacios en blanco adicionales al final
 }
 
 const opcionesInstructivos = (from) => {
@@ -76,7 +84,8 @@ const opcionesInstructivos = (from) => {
             const nextNumber = pdfNamesArray.length + 1;
 
             // Agregar el elemento con el formato deseado al array
-            pdfNamesArray.push(`${nextNumber}. Salir`);
+            pdfNamesArray.push(`${nextNumber}. Volver`);
+            pdfNamesArray.push(`${nextNumber+1}. Salir`);
 
             // Combina los elementos del array en un solo string con saltos de línea
             const resultString = pdfNamesArray.join('\n');

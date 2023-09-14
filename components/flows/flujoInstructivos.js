@@ -1,8 +1,8 @@
 const { addKeyword } = require('@bot-whatsapp/bot')
 
 const { opMenuInstructivos,opcionesInstructivos } = require('../api/apiOpciones')
-const { respuestaConDelay } = require('../api/apiMensajes')
-const { addProps } = require('../api/apiTickets')
+const { respuestaConDelay, respuesta } = require('../api/apiMensajes')
+const { addProps, incPregunta,getProp } = require('../api/apiTickets')
 const { sendFile } = require('../api/apiInstructivos')
 
 const flujoInstructivos = addKeyword('1',{sensitive:true})
@@ -10,30 +10,74 @@ const flujoInstructivos = addKeyword('1',{sensitive:true})
     const opciones = opMenuInstructivos(ctx.from)
     respuestaConDelay(ctx.from,provider,opciones)
 })
-.addAnswer("Elija una categoria",{capture:true},async (ctx,{provider,fallBack}) => {
-    switch (ctx.body) {
-        case "1":
-            addProps(ctx.from,{categoria: "Operación Playa"})
-            break;
+.addAnswer("Elija una categoria",{capture:true},async (ctx,{provider,fallBack,endFlow}) => {
 
-        case "2":
-            addProps(from,{categoria: "Operación Tienda"})
-            break;
+    const i = getProp(ctx.from,'pregunta')
 
-        case "3":
-            addProps(from,{categoria: "Admin - Contable"})
-            break;
+    const inc = await funcionPregunta(i,provider,ctx,endFlow)
+ 
+    inc === true && incPregunta(ctx.from);
+
+    const pregunta = sigPregunta(getProp(ctx.from,'pregunta'))
+
+    if(pregunta) fallBack(pregunta)
+
+})
+
+const sigPregunta = (orden) => {
+
+    switch (orden) {
+
+        case 1: return "Elija una categoria"
+
+        case 2: return "Elija el instructivo que desea descargar"
     
         default:
-            fallBack("Opcion invalida - Elija una opcion valida")
-            break;
+
+            return false
+
     }
 
-    const instructivos = await opcionesInstructivos(ctx.from);
-    respuestaConDelay(ctx.from,provider,instructivos)
-})
-.addAnswer("Elija el instructivo que desea descargar",{capture:true},async (ctx,{provider}) => {
-    await sendFile(ctx.from,ctx.body,provider)
-})
+}
+
+const funcionPregunta = async (orden,provider,ctx,endFlow) => {
+
+    switch (orden) {
+        
+        case 1:
+
+        switch (ctx.body) {
+            case "1":
+                addProps(ctx.from,{categoria: "Operación Playa"})
+                break;
+    
+            case "2":
+                addProps(ctx.from,{categoria: "Operación Tienda"})
+                break;
+    
+            case "3":
+                addProps(ctx.from,{categoria: "Admin - Contable"})
+                break;
+        
+            default:
+                await respuesta(ctx.from,provider,"Opcion invalida - Elija una opcion valida")
+                const opciones = opMenuInstructivos(ctx.from)
+                respuestaConDelay(ctx.from,provider,opciones)
+                return false
+        }
+    
+        const instructivos = await opcionesInstructivos(ctx.from);
+        respuestaConDelay(ctx.from,provider,instructivos)
+        return true
+
+        case 2:
+            const flag = await sendFile(ctx.from,ctx.body,provider)
+            if(!flag){
+                const instructivos = await opcionesInstructivos(ctx.from);
+                respuestaConDelay(ctx.from,provider,instructivos)
+            }
+            return flag
+        }
+}
 
 module.exports = flujoInstructivos

@@ -39,7 +39,7 @@ const flujoPrincipal = addKeyword("sigesbot")
         return endFlow({ body: "Opcion invalida - Escriba *sigesbot* para volver a comenzar" });
         }
 
-        if(ctx.body === "0" || ctx.body === "3") addProps(ctx.from,{pregunta: 1})
+        if(ctx.body === "0" || ctx.body === "3" || ctx.body === "1") addProps(ctx.from,{pregunta: 1})
         if(ctx.body === "2") addProps(ctx.from,{flagUsers: 1})
         
     },[flujoInstructivos,flujoSoporte,flujoSOS,flujoAltaBotuser])

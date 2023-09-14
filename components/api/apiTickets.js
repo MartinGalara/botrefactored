@@ -34,7 +34,8 @@ const getInstructivo = (from, index) => {
   // Convertir el índice a un número entero
   const numericIndex = parseInt(index);
 
-  if(parseInt(index) === instructivos.length+1) return "Salir"
+  if(parseInt(index) === instructivos.length+1) return "Volver"
+  if(parseInt(index) === instructivos.length+2) return "Salir"
 
   // Verificar si el índice es un número entero válido
   if (!Number.isInteger(numericIndex) || numericIndex <= 0 || numericIndex > instructivos.length) {

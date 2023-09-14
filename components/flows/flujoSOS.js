@@ -26,7 +26,7 @@ const sigPregunta = (orden) => {
 
         case 1: return "Esta pregunta solo admite *si* o *no* como respuesta"
 
-        case 2: return "Indique para que estación necesita soporte"
+        case 2: return "Indique en que estación ocurre el incidente"
     
         default:
 
