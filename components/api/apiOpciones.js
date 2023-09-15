@@ -84,8 +84,8 @@ const opcionesInstructivos = (from) => {
             const nextNumber = pdfNamesArray.length + 1;
 
             // Agregar el elemento con el formato deseado al array
-            pdfNamesArray.push(`${nextNumber}. Volver`);
-            pdfNamesArray.push(`${nextNumber+1}. Salir`);
+            pdfNamesArray.unshift(`0. Volver`);
+            pdfNamesArray.push(`O envie *salir* para volver a comenzar`);
 
             // Combina los elementos del array en un solo string con saltos de línea
             const resultString = pdfNamesArray.join('\n');

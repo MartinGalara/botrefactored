@@ -71,6 +71,18 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
         return true
 
         case 2:
+            if(ctx.body === "0"){
+                addProps(ctx.from,{pregunta:0})
+                const opciones = opMenuInstructivos(ctx.from)
+                respuestaConDelay(ctx.from,provider,opciones)
+                return true
+            }
+
+            if(ctx.body.toLowerCase() === "salir"){
+                await respuesta(ctx.from,provider,`Envie *sigesbot* para volver a comenzar`)
+                return true
+            }
+
             const flag = await sendFile(ctx.from,ctx.body,provider)
             if(!flag){
                 const instructivos = await opcionesInstructivos(ctx.from);

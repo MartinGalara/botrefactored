@@ -17,9 +17,6 @@ bot.qr.png
 dist
 dist-ssr
 .local
-db.json
-db
-queue.class.log
 
 # Editor directories and files
 .vscode/
@@ -32,7 +29,10 @@ queue.class.log
 *.sln
 *.sw?
 
-
 # dotenv environment variables file
 .env
 .env.test
+
+# Ignorar db.json y queue.class.log
+db.json
+queue.class.log

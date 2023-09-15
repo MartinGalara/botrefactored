@@ -8,17 +8,17 @@ const sendFile = async (from, body, provider) => {
 
     let prov = provider.getInstance();
 
-    if(instructivo === "Volver"){
+/*     if(instructivo === "Volver"){
       addProps(from,{pregunta:0})
       const opciones = opMenuInstructivos(from)
       respuestaConDelay(from,provider,opciones)
       return true
-    }
+    } */
 
-    if(instructivo === "Salir"){
+/*     if(instructivo === "Salir"){
       await prov.sendMessage(`${from}@s.whatsapp.net`,{text:`Gracias por comunicarse con nosotros.`})
       return true
-    }
+    } */
 
     if(!instructivo) {
       await prov.sendMessage(`${from}@s.whatsapp.net`,{text:`Opción incorrecta. Envie "sigesbot" para volver a comenzar.`})
