@@ -53,8 +53,17 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
 
                 const opciones = getUsers(ctx.from)
                 if(!opciones){
+
                     addProps(ctx.from,{pregunta: 2})
-                    await sendSosTicket(ctx.from)
+
+                    const ticket = await sendSosTicket(ctx.from)
+
+                    ticket ? await respuesta(ctx.from,provider,`Tu numero de ticket es ${ticket}.`) : await respuesta(ctx.from,provider,`Ticket generado exitosamente.`)
+
+                    await sendSOSMessages(ctx.from,provider)
+           
+                    await respuesta(ctx.from,provider,`Gracias por comunicarse con nosotros.`)
+                    
                     return true
                 }
                 else{

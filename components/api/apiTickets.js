@@ -16,8 +16,6 @@ const addProps = (from,props) => {
       ticket[from] = {}
       Object.assign(ticket[from], props);
     }
-
-    console.log(ticket)
 }
 
 const getProp = (from,prop) => {
@@ -226,8 +224,6 @@ data.html = `${commonHtml}${specificHtml}</div>`;
 
   const mail = await transporter.sendMail(data);
 
-  console.log(ticket)
-
   return newTicket.id
 
 }
@@ -270,9 +266,6 @@ const getManagers = async (from,id) => {
       }
     }
   });
-
-  console.log(ticket)
-  
 }
 
 const sendSosTicket = async (from) => {
@@ -326,8 +319,6 @@ const sendSosTicket = async (from) => {
   `;
 
   const mail = await transporter.sendMail(data);
-
-  console.log(ticket)
 
   return newTicket.id
 

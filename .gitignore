@@ -17,7 +17,9 @@ bot.qr.png
 dist
 dist-ssr
 .local
-
+db.json
+db
+queue.class.log
 
 # Editor directories and files
 .vscode/

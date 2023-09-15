@@ -45,7 +45,7 @@ const funcionPregunta = async (orden,provider,ctx) => {
         case 1:
             switch (ctx.body) {
                 case "1":
-                    ctx.body = "App Propia ( APP YPF - PUMA PRIS - AXION ON - SHELL BOX - ETC )"
+                    ctx.body = "App Propia ( YVOS-PRIS-ON-BOX-ETC )"
                     break;
                 case "2":
                     ctx.body = "Mercado Pago - Modo - ETC"

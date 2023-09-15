@@ -21,7 +21,7 @@ const opMenuInicial = (from) => {
 
     options += "O envie *salir* para finalizar la conversacion\n";
 
-    return options.trim(); // Eliminar espacios en blanco adicionales al final
+    return options.trim();
 }
 
 
@@ -39,7 +39,7 @@ const opMenuInstructivos = (from) => {
         options += "3. Admin - Contable";
     }
 
-    return options.trim(); // Eliminar espacios en blanco adicionales al final
+    return options.trim();
 }
 
 const opcionesInstructivos = (from) => {
