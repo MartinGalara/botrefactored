@@ -318,6 +318,10 @@ const sendSosTicket = async (from) => {
   </div>
   `;
 
+  if(ticket[from].mailAttachments && ticket[from].mailAttachments.length !== 0){
+    data.attachments = ticket[from].mailAttachments;
+  }
+
   const mail = await transporter.sendMail(data);
 
   return newTicket.id
@@ -352,7 +356,7 @@ const newUserInfo = (from) => {
     'T': 'Tienda',
     'B': 'Boxes',
     'A': 'Administracion',
-    'G': 'Global',
+    'G': 'Gerente / Dueño',
   };
 
   // Crear un objeto con los datos formateados
@@ -375,7 +379,7 @@ const newUserInfo = (from) => {
     }
   }
 
-  result += `\nIndique la opcion correcta\n1. Confirmar nuevo usuario\n2. Cancelar`;
+  result += `\nIndique la opcion correcta\n1. Confirmar datos\n2. Modificar Datos\n3. Confirmar y dar de alta nuevo usuario\n4. Cancelar y no grabar`;
 
   return result;
 };

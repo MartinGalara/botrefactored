@@ -1,15 +1,15 @@
 [
   {
-    "ref": "67f3900b-8e78-42d9-94f3-4f8e030eddbe",
-    "keyword": "30142d0fd00a303ae59e58fd1f354f0b",
+    "ref": "cf89cf1a-a98b-4a47-8384-33601179f24b",
+    "keyword": "6df62eff77dad3ffc874eb0905d44485",
     "answer": "sigesbot",
     "options": {},
     "from": "5493515924253",
     "refSerialize": "c5ec9969bd663945d9b54dda57567456"
   },
   {
-    "ref": "ans_256d9c57-55ac-4fd1-92f0-8bc00aba6358",
-    "keyword": "key_105878d2-571a-44d3-a933-2b419b73613d",
+    "ref": "ans_0c33adfa-e4f0-4073-92ea-8696f8591f6f",
+    "keyword": "key_a2b42f53-4e83-4ed4-9e66-0792b223e2a7",
     "answer": "Gracias por comunicarte con Sistema SIGES.",
     "options": {
       "media": null,
@@ -21,12 +21,12 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "890a037848c126a38549f0e9e1096e6e",
+    "refSerialize": "60657f361f80d298d1296589123a4c84",
     "from": "5493515924253"
   },
   {
-    "ref": "ans_5c5792f1-7e3e-4033-92f8-2b6b85758683",
-    "keyword": "ans_256d9c57-55ac-4fd1-92f0-8bc00aba6358",
+    "ref": "ans_2fbe492c-9821-4fb5-938a-cebfdd82d178",
+    "keyword": "ans_0c33adfa-e4f0-4073-92ea-8696f8591f6f",
     "answer": "Elija la opcion deseada",
     "options": {
       "media": null,
@@ -36,7 +36,7 @@
       "delay": 0,
       "nested": [
         {
-          "ref": "key_c30dafc1-4d20-4401-870c-d9a788bf3c5f",
+          "ref": "key_626945eb-4431-4646-8726-c9a91ce9e8a9",
           "keyword": "1",
           "options": {
             "sensitive": true,
@@ -45,8 +45,8 @@
           "refSerialize": "065e0005da6e5c278a53691e53b48955"
         },
         {
-          "ref": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-          "keyword": "key_c30dafc1-4d20-4401-870c-d9a788bf3c5f",
+          "ref": "ans_d9fe1a35-c1f9-4e96-953d-b742505caf8c",
+          "keyword": "key_626945eb-4431-4646-8726-c9a91ce9e8a9",
           "answer": "__call_action__",
           "options": {
             "media": null,
@@ -58,11 +58,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "f0c27b1cba67214fc1645e43d04a3c1d"
+          "refSerialize": "5bea56debaf0c1852ef7605cc0f16bb0"
         },
         {
-          "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-          "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
+          "ref": "ans_e8d53df3-75a2-4a35-abf7-738e87d7f3a5",
+          "keyword": "ans_d9fe1a35-c1f9-4e96-953d-b742505caf8c",
           "answer": "Elija una categoria",
           "options": {
             "media": null,
@@ -74,10 +74,10 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "84603209929c15df4f34504aae21f5e6"
+          "refSerialize": "12d685386f0a56057281bfcc2a340de4"
         },
         {
-          "ref": "key_b9e94baa-2eaf-477b-b695-4998c874911e",
+          "ref": "key_c1d6f2ad-3450-4703-8a89-37a6dd59f891",
           "keyword": "2",
           "options": {
             "sensitive": true,
@@ -86,9 +86,9 @@
           "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
         },
         {
-          "ref": "ans_b5a3d1de-a76b-4551-86de-cac81156b60f",
-          "keyword": "key_b9e94baa-2eaf-477b-b695-4998c874911e",
-          "answer": "Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion",
+          "ref": "ans_f02f307b-b230-4acf-ae45-ec5ebbbd3131",
+          "keyword": "key_c1d6f2ad-3450-4703-8a89-37a6dd59f891",
+          "answer": "Verificando...",
           "options": {
             "media": null,
             "buttons": [],
@@ -99,12 +99,12 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "7da94a653309305d08ac6e8344269374"
+          "refSerialize": "d8c35350622e518fba2be20a23e3cc73"
         },
         {
-          "ref": "ans_21043324-6aa5-475e-a043-d0310a9809eb",
-          "keyword": "ans_b5a3d1de-a76b-4551-86de-cac81156b60f",
-          "answer": "Verificando",
+          "ref": "ans_336e2afe-e60f-466e-ba9f-e7fe388f9cf7",
+          "keyword": "ans_f02f307b-b230-4acf-ae45-ec5ebbbd3131",
+          "answer": "Verificando...",
           "options": {
             "media": null,
             "buttons": [],
@@ -115,11 +115,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "dd33a02d30e8d99373e7b934128bed16"
+          "refSerialize": "a590550fe1cb7de0800511995195175e"
         },
         {
-          "ref": "ans_6307ede5-d58e-4d75-8437-3f58b48d9c6a",
-          "keyword": "ans_21043324-6aa5-475e-a043-d0310a9809eb",
+          "ref": "ans_ab67749b-0156-4937-8f48-bdf7e87e9c0d",
+          "keyword": "ans_336e2afe-e60f-466e-ba9f-e7fe388f9cf7",
           "answer": "Elija el numero del problema que tiene\n1. Despachos CIO\n2. Apps de Pago y Fidelización\n3. Impresora Fiscal / Comandera\n4. Impresora Común / Oficina\n5. Sistema SIGES\n6. Libro IVA\n7. Servidor",
           "options": {
             "media": null,
@@ -129,7 +129,7 @@
             "delay": 0,
             "nested": [
               {
-                "ref": "key_81246d61-c356-45b6-9285-9722dd96e661",
+                "ref": "key_09108ce9-1937-4436-b053-bc37d223d161",
                 "keyword": "1",
                 "options": {
                   "sensitive": true,
@@ -138,8 +138,8 @@
                 "refSerialize": "065e0005da6e5c278a53691e53b48955"
               },
               {
-                "ref": "ans_322c4682-335f-4078-b449-cc3eec2b2c48",
-                "keyword": "key_81246d61-c356-45b6-9285-9722dd96e661",
+                "ref": "ans_5e6209e8-33a2-42d5-8f9f-121d76d13e87",
+                "keyword": "key_09108ce9-1937-4436-b053-bc37d223d161",
                 "answer": "Describa el problema por escrito o adjunte un AUDIO",
                 "options": {
                   "media": null,
@@ -151,10 +151,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "5dfcf0857e86fcaf616058c46b76512e"
+                "refSerialize": "8eae92bdd7a0530ca8571ad50a5424d2"
               },
               {
-                "ref": "key_0a9789a3-da24-4005-89bd-f087f958512b",
+                "ref": "key_80964c56-fffb-416b-852a-aab5700b1fe9",
                 "keyword": "2",
                 "options": {
                   "sensitive": true,
@@ -163,9 +163,9 @@
                 "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
               },
               {
-                "ref": "ans_fa812354-af2a-4459-bb4a-22e0af08644e",
-                "keyword": "key_0a9789a3-da24-4005-89bd-f087f958512b",
-                "answer": "Elija en que aplicación esta teniendo el inconveniente\n1. App Propia ( APP YPF - PUMA PRIS - AXION ON - SHELL BOX - ETC )\n2. Mercado Pago - Modo - ETC\n3. Todas las aplicaciones",
+                "ref": "ans_d176ac06-8a0e-4d4c-8e11-3f1a0b0c000e",
+                "keyword": "key_80964c56-fffb-416b-852a-aab5700b1fe9",
+                "answer": "Elija en que aplicación esta teniendo el inconveniente\n1. App Propia ( YVOS-PRIS-ON-BOX-ETC )\n2. Mercado Pago - Modo - ETC\n3. Todas las aplicaciones",
                 "options": {
                   "media": null,
                   "buttons": [],
@@ -176,10 +176,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "8c1790b1db1eeb572804ad9f412b9058"
+                "refSerialize": "45f716047e3bb8f81f44952469896551"
               },
               {
-                "ref": "key_9c5e27b9-70c4-43a2-bc98-9b510c7abcf8",
+                "ref": "key_9d8b2ed8-ee01-497d-a2ac-291447a99248",
                 "keyword": "3",
                 "options": {
                   "sensitive": true,
@@ -188,8 +188,8 @@
                 "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
               },
               {
-                "ref": "ans_c66d48dc-0ad9-43f7-a06f-819df3906552",
-                "keyword": "key_9c5e27b9-70c4-43a2-bc98-9b510c7abcf8",
+                "ref": "ans_a10a51ce-96a8-4547-b8dc-9bf14353b6f2",
+                "keyword": "key_9d8b2ed8-ee01-497d-a2ac-291447a99248",
                 "answer": "Elija la opcion deseada\n1. Soporte para impresora fiscal\n2. Instalar una impresora fiscal",
                 "options": {
                   "media": null,
@@ -201,10 +201,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "7b3a303ad25947599c98dfb3972354a6"
+                "refSerialize": "2017eb6eddfaa7dea3b02385fb8e3c8a"
               },
               {
-                "ref": "key_3a92beff-48e6-4ae5-b96b-68d9bf371378",
+                "ref": "key_ad67f739-d835-436c-9ebf-431c96668698",
                 "keyword": "4",
                 "options": {
                   "sensitive": true,
@@ -213,8 +213,8 @@
                 "refSerialize": "fc09f52170be47fcb14a1cee9c5d3c52"
               },
               {
-                "ref": "ans_885362f9-981e-4385-bb61-3d4a04089e04",
-                "keyword": "key_3a92beff-48e6-4ae5-b96b-68d9bf371378",
+                "ref": "ans_f9bf4e0d-4ec2-4f29-8b1d-d7aca72d80c4",
+                "keyword": "key_ad67f739-d835-436c-9ebf-431c96668698",
                 "answer": "Elija la opcion deseada\n1. Soporte para impresora\n2. Instalar una impresora",
                 "options": {
                   "media": null,
@@ -226,10 +226,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "4aa5753766c353ef363fe687114ec0cc"
+                "refSerialize": "17550d93339bc2321fc7827332e2e742"
               },
               {
-                "ref": "key_74cbd684-af05-4503-b758-d0b61e2a6c58",
+                "ref": "key_5e3d42d8-85dd-4698-a87b-3e7344a2d12a",
                 "keyword": "5",
                 "options": {
                   "sensitive": true,
@@ -238,8 +238,8 @@
                 "refSerialize": "660d6f380cd3d2aa67431f161ba4eccf"
               },
               {
-                "ref": "ans_03eb37e4-0ed3-44b0-b1f5-d841195e3035",
-                "keyword": "key_74cbd684-af05-4503-b758-d0b61e2a6c58",
+                "ref": "ans_1b91bdf8-cdc7-41ee-be36-4bea93f09ac5",
+                "keyword": "key_5e3d42d8-85dd-4698-a87b-3e7344a2d12a",
                 "answer": "Elija el origen del problema\n1. Facturación\n2. Cierre de turno\n3. Informes\n4. Otro",
                 "options": {
                   "media": null,
@@ -251,10 +251,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "1336aecd8c1408eae30bb5f82fd203c3"
+                "refSerialize": "d0aee93b584e6e397da83254569af517"
               },
               {
-                "ref": "key_a916683f-768f-4f82-9f4a-1ecba5d41190",
+                "ref": "key_08130dcc-a63b-4a80-974c-f75efd2409f4",
                 "keyword": "6",
                 "options": {
                   "sensitive": true,
@@ -263,8 +263,8 @@
                 "refSerialize": "ae093091123de34d8570657f16bd7343"
               },
               {
-                "ref": "ans_8fbacb81-215d-4092-a16b-b988af1c12a3",
-                "keyword": "key_a916683f-768f-4f82-9f4a-1ecba5d41190",
+                "ref": "ans_eaab1795-5804-4f8a-9a97-709d3afded48",
+                "keyword": "key_08130dcc-a63b-4a80-974c-f75efd2409f4",
                 "answer": "Elija donde se encuentra el inconveniente\n1. Libro IVA Compra\n2. Libro IVA Venta",
                 "options": {
                   "media": null,
@@ -276,10 +276,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "fdf6b51ccec98721fa07fde3cf018b6e"
+                "refSerialize": "1b54ac7dd54be1ba3ea6fc9eb67db625"
               },
               {
-                "ref": "key_96cd5d47-5e11-49f3-8066-df8b7654863c",
+                "ref": "key_78a17534-c501-4991-b898-84eccfcaac31",
                 "keyword": "7",
                 "options": {
                   "sensitive": true,
@@ -288,8 +288,8 @@
                 "refSerialize": "d557e5600097df00d97951283f83f6bd"
               },
               {
-                "ref": "ans_0e4ed4f0-ced9-47ca-95af-6ffe55c52636",
-                "keyword": "key_96cd5d47-5e11-49f3-8066-df8b7654863c",
+                "ref": "ans_62c301f1-6047-47db-9d83-0e0fead4ae1a",
+                "keyword": "key_78a17534-c501-4991-b898-84eccfcaac31",
                 "answer": "Describa el problema por escrito o adjunte un AUDIO",
                 "options": {
                   "media": null,
@@ -301,16 +301,16 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "c269169050084f90829f38da22a104c3"
+                "refSerialize": "93f77d72896b5921569a8066b23f6635"
               }
             ],
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "7e19380b431b8222825dd5909f71a1db"
+          "refSerialize": "826fe6e083cd6a017caa4387a03e7e65"
         },
         {
-          "ref": "key_c010de9c-e3f5-4b2a-a7e5-2ad4a9598812",
+          "ref": "key_5230789e-26e6-4dbd-81d1-b85d2d5da7c2",
           "keyword": "0",
           "options": {
             "sensitive": true,
@@ -319,8 +319,8 @@
           "refSerialize": "cd74bc5a41b3d90e6ea17ea895914842"
         },
         {
-          "ref": "ans_84262b47-bbda-4a5b-b5bb-0c94e39449c9",
-          "keyword": "key_c010de9c-e3f5-4b2a-a7e5-2ad4a9598812",
+          "ref": "ans_a2fd503e-d23c-46cf-9ba8-8e7c70d00a8d",
+          "keyword": "key_5230789e-26e6-4dbd-81d1-b85d2d5da7c2",
           "answer": "Esta opcion esta disponible para casos donde mas de la mitad de los puntos de venta no pueden facturar\nSi esto es asi envie *si*\nDe lo contrario envie *no*",
           "options": {
             "media": null,
@@ -332,10 +332,10 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "baae38c8a15b32e6938cf999a4b02138"
+          "refSerialize": "e50daffe9cea3353f5a4dfe31c4073ad"
         },
         {
-          "ref": "key_d3a298f9-f3ba-4e81-89d7-070570aec661",
+          "ref": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
           "keyword": "3",
           "options": {
             "sensitive": true,
@@ -344,8 +344,8 @@
           "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
         },
         {
-          "ref": "ans_8c18f047-3e4e-4a22-b22c-4242e99164c7",
-          "keyword": "key_d3a298f9-f3ba-4e81-89d7-070570aec661",
+          "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+          "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
           "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
           "options": {
             "media": null,
@@ -357,102 +357,27 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "5d22818e139b031e038d79cc7cb46c1c"
+          "refSerialize": "afa89981fa2be8d89e9f19082cbb161a"
         }
       ],
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "082294a32918e947577e657e9ebb4d07",
+    "refSerialize": "3f710c7b908e75c00bd0d208b048a71e",
     "from": "5493515924253"
   },
   {
-    "ref": "143e3309-74e9-498a-9e79-37fd067db58e",
-    "keyword": "082294a32918e947577e657e9ebb4d07",
-    "answer": "1",
-    "options": {},
-    "from": "5493515924253",
-    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
-  },
-  {
-    "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-    "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-    "answer": "Elija una categoria",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "84603209929c15df4f34504aae21f5e6",
-    "from": "5493515924253"
-  },
-  {
-    "ref": "3cef0d31-9aad-4814-8958-f3c2e31167c4",
-    "keyword": "84603209929c15df4f34504aae21f5e6",
-    "answer": "1",
-    "options": {},
-    "from": "5493515924253",
-    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
-  },
-  {
-    "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-    "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-    "answer": "Elija el instructivo que desea descargar",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "84603209929c15df4f34504aae21f5e6",
-    "from": "5493515924253"
-  },
-  {
-    "ref": "8b7654cb-8c81-468e-a8d0-e06e9806ba04",
-    "keyword": "84603209929c15df4f34504aae21f5e6",
-    "answer": "0",
-    "options": {},
-    "from": "5493515924253",
-    "refSerialize": "8f2014815c38046ebbfffe3ac4f3f41c"
-  },
-  {
-    "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-    "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-    "answer": "Elija una categoria",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "84603209929c15df4f34504aae21f5e6",
-    "from": "5493515924253"
-  },
-  {
-    "ref": "810d3cb8-f786-42ce-add7-3e7609c07b0c",
-    "keyword": "84603209929c15df4f34504aae21f5e6",
+    "ref": "4cc12497-0b56-4136-b079-18359e83e840",
+    "keyword": "3f710c7b908e75c00bd0d208b048a71e",
     "answer": "3",
     "options": {},
     "from": "5493515924253",
     "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
   },
   {
-    "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-    "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-    "answer": "Elija el instructivo que desea descargar",
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
     "options": {
       "media": null,
       "buttons": [],
@@ -463,21 +388,21 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "84603209929c15df4f34504aae21f5e6",
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
     "from": "5493515924253"
   },
   {
-    "ref": "90c2f2fa-6835-4027-ae95-c24b19db60e4",
-    "keyword": "84603209929c15df4f34504aae21f5e6",
-    "answer": "0",
+    "ref": "5641fc84-9bd8-4699-8a10-d2b3b63cc7ad",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "asd",
     "options": {},
     "from": "5493515924253",
-    "refSerialize": "8f2014815c38046ebbfffe3ac4f3f41c"
+    "refSerialize": "6988c0490446f551a44ac1d6ae1ba6a3"
   },
   {
-    "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-    "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-    "answer": "Elija una categoria",
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el numero de telefono sin 0 y sin 15",
     "options": {
       "media": null,
       "buttons": [],
@@ -488,21 +413,46 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "84603209929c15df4f34504aae21f5e6",
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
     "from": "5493515924253"
   },
   {
-    "ref": "7c0f0327-8907-424e-b983-5ccff0cde688",
-    "keyword": "84603209929c15df4f34504aae21f5e6",
+    "ref": "6df4eb95-c196-418c-bf6c-f3e4c5f41ba1",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "3516454748",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "1b0d70c0686b772fb6068bf82c5e94aa"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Indique para que estación quiere dar de alta este usuario",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "28e0095a-4d97-4cc0-a847-0737503df6b3",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
     "answer": "2",
     "options": {},
     "from": "5493515924253",
     "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
   },
   {
-    "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-    "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-    "answer": "Elija el instructivo que desea descargar",
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra dar de alta a nuevos usuarios ?\n1. SI\n2. NO",
     "options": {
       "media": null,
       "buttons": [],
@@ -513,28 +463,378 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "84603209929c15df4f34504aae21f5e6",
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
     "from": "5493515924253"
   },
   {
-    "ref": "30ca33b3-e46e-4905-8275-5c25114dbfd9",
-    "keyword": "84603209929c15df4f34504aae21f5e6",
-    "answer": "SALIR",
+    "ref": "aab82797-d248-42ab-96bc-0dcee404a6dc",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
     "options": {},
     "from": "5493515924253",
-    "refSerialize": "bc60430b239f1fbf02ee581be04659da"
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
   },
   {
-    "ref": "306e26b9-a304-4f45-beac-67833a723f10",
-    "keyword": "bc60430b239f1fbf02ee581be04659da",
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra ver los instructivos Admin / Contables ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "41fbe4b3-727b-4659-a151-bfdb0ba27742",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra enviar tickets *SOS* ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "7c17098b-1e2b-46cb-a682-b2a052d914ba",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario es encargado de algun area y recibira copia de los tickets de dicha area ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "56c88afd-ce0c-4d46-a9ae-5f469e6d4481",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Indique el area\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion\n5. Global",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "165ef446-3f31-459f-8288-ce000514c24c",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "5",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "d2b414a4bc0b3490276097c7513b4c8c"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el correo electronico del encargado",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "7249072f-87f1-4bc0-9858-b41bc4994eb4",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "mgalara@gmail.com",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "8914bdd8e21a6cc4d89bfe532154bdde"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Verifique que los datos sean correctos",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "a9589f63-b597-4d93-a15b-d6afda1b7059",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "5905949c-37e8-4bba-bc82-c31ae40f2c9c",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "asdasd2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "7d3c36ba4b674e15c7f787f6f98bdd7e"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el numero de telefono sin 0 y sin 15",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "a160fdfa-84ed-4f1f-887b-932d70452177",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "3516454748",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "1b0d70c0686b772fb6068bf82c5e94aa"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Indique para que estación quiere dar de alta este usuario",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "f01a522f-458a-4462-9856-e1ad6c312665",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra dar de alta a nuevos usuarios ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "7bf4449f-6b7a-4d4c-ad02-f13667c84948",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra ver los instructivos Admin / Contables ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "e1f3093a-b584-4804-a32f-f2faaad07fa0",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra enviar tickets *SOS* ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "07679cbc-723a-48b5-b6b1-a6bad5eaffb6",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario es encargado de algun area y recibira copia de los tickets de dicha area ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "82f04161-1dbb-4175-8f22-b3e6e32eb021",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Verifique que los datos sean correctos",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "621389e8-6a36-45de-8095-5b8e44082472",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "03794b12-c61e-41a1-a0b2-bbc0f01c9285",
+    "keyword": "290236b1d481a790a200ea6e94b2122a",
     "answer": "sigesbot",
     "options": {},
     "from": "5493515924253",
     "refSerialize": "c5ec9969bd663945d9b54dda57567456"
   },
   {
-    "ref": "ans_256d9c57-55ac-4fd1-92f0-8bc00aba6358",
-    "keyword": "key_105878d2-571a-44d3-a933-2b419b73613d",
+    "ref": "ans_0c33adfa-e4f0-4073-92ea-8696f8591f6f",
+    "keyword": "key_a2b42f53-4e83-4ed4-9e66-0792b223e2a7",
     "answer": "Gracias por comunicarte con Sistema SIGES.",
     "options": {
       "media": null,
@@ -546,12 +846,12 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "890a037848c126a38549f0e9e1096e6e",
+    "refSerialize": "60657f361f80d298d1296589123a4c84",
     "from": "5493515924253"
   },
   {
-    "ref": "ans_5c5792f1-7e3e-4033-92f8-2b6b85758683",
-    "keyword": "ans_256d9c57-55ac-4fd1-92f0-8bc00aba6358",
+    "ref": "ans_2fbe492c-9821-4fb5-938a-cebfdd82d178",
+    "keyword": "ans_0c33adfa-e4f0-4073-92ea-8696f8591f6f",
     "answer": "Elija la opcion deseada",
     "options": {
       "media": null,
@@ -561,7 +861,7 @@
       "delay": 0,
       "nested": [
         {
-          "ref": "key_c30dafc1-4d20-4401-870c-d9a788bf3c5f",
+          "ref": "key_626945eb-4431-4646-8726-c9a91ce9e8a9",
           "keyword": "1",
           "options": {
             "sensitive": true,
@@ -570,8 +870,8 @@
           "refSerialize": "065e0005da6e5c278a53691e53b48955"
         },
         {
-          "ref": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
-          "keyword": "key_c30dafc1-4d20-4401-870c-d9a788bf3c5f",
+          "ref": "ans_d9fe1a35-c1f9-4e96-953d-b742505caf8c",
+          "keyword": "key_626945eb-4431-4646-8726-c9a91ce9e8a9",
           "answer": "__call_action__",
           "options": {
             "media": null,
@@ -583,11 +883,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "f0c27b1cba67214fc1645e43d04a3c1d"
+          "refSerialize": "5bea56debaf0c1852ef7605cc0f16bb0"
         },
         {
-          "ref": "ans_7eb9ad2b-5ce5-4d72-bd83-c5f81b9be4e2",
-          "keyword": "ans_c981a06b-fbd7-478c-bb06-b49a58cb3ed6",
+          "ref": "ans_e8d53df3-75a2-4a35-abf7-738e87d7f3a5",
+          "keyword": "ans_d9fe1a35-c1f9-4e96-953d-b742505caf8c",
           "answer": "Elija una categoria",
           "options": {
             "media": null,
@@ -599,10 +899,10 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "84603209929c15df4f34504aae21f5e6"
+          "refSerialize": "12d685386f0a56057281bfcc2a340de4"
         },
         {
-          "ref": "key_b9e94baa-2eaf-477b-b695-4998c874911e",
+          "ref": "key_c1d6f2ad-3450-4703-8a89-37a6dd59f891",
           "keyword": "2",
           "options": {
             "sensitive": true,
@@ -611,9 +911,9 @@
           "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
         },
         {
-          "ref": "ans_b5a3d1de-a76b-4551-86de-cac81156b60f",
-          "keyword": "key_b9e94baa-2eaf-477b-b695-4998c874911e",
-          "answer": "Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion",
+          "ref": "ans_f02f307b-b230-4acf-ae45-ec5ebbbd3131",
+          "keyword": "key_c1d6f2ad-3450-4703-8a89-37a6dd59f891",
+          "answer": "Verificando...",
           "options": {
             "media": null,
             "buttons": [],
@@ -624,12 +924,12 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "7da94a653309305d08ac6e8344269374"
+          "refSerialize": "d8c35350622e518fba2be20a23e3cc73"
         },
         {
-          "ref": "ans_21043324-6aa5-475e-a043-d0310a9809eb",
-          "keyword": "ans_b5a3d1de-a76b-4551-86de-cac81156b60f",
-          "answer": "Verificando",
+          "ref": "ans_336e2afe-e60f-466e-ba9f-e7fe388f9cf7",
+          "keyword": "ans_f02f307b-b230-4acf-ae45-ec5ebbbd3131",
+          "answer": "Verificando...",
           "options": {
             "media": null,
             "buttons": [],
@@ -640,11 +940,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "dd33a02d30e8d99373e7b934128bed16"
+          "refSerialize": "a590550fe1cb7de0800511995195175e"
         },
         {
-          "ref": "ans_6307ede5-d58e-4d75-8437-3f58b48d9c6a",
-          "keyword": "ans_21043324-6aa5-475e-a043-d0310a9809eb",
+          "ref": "ans_ab67749b-0156-4937-8f48-bdf7e87e9c0d",
+          "keyword": "ans_336e2afe-e60f-466e-ba9f-e7fe388f9cf7",
           "answer": "Elija el numero del problema que tiene\n1. Despachos CIO\n2. Apps de Pago y Fidelización\n3. Impresora Fiscal / Comandera\n4. Impresora Común / Oficina\n5. Sistema SIGES\n6. Libro IVA\n7. Servidor",
           "options": {
             "media": null,
@@ -654,7 +954,7 @@
             "delay": 0,
             "nested": [
               {
-                "ref": "key_81246d61-c356-45b6-9285-9722dd96e661",
+                "ref": "key_09108ce9-1937-4436-b053-bc37d223d161",
                 "keyword": "1",
                 "options": {
                   "sensitive": true,
@@ -663,8 +963,8 @@
                 "refSerialize": "065e0005da6e5c278a53691e53b48955"
               },
               {
-                "ref": "ans_322c4682-335f-4078-b449-cc3eec2b2c48",
-                "keyword": "key_81246d61-c356-45b6-9285-9722dd96e661",
+                "ref": "ans_5e6209e8-33a2-42d5-8f9f-121d76d13e87",
+                "keyword": "key_09108ce9-1937-4436-b053-bc37d223d161",
                 "answer": "Describa el problema por escrito o adjunte un AUDIO",
                 "options": {
                   "media": null,
@@ -676,10 +976,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "5dfcf0857e86fcaf616058c46b76512e"
+                "refSerialize": "8eae92bdd7a0530ca8571ad50a5424d2"
               },
               {
-                "ref": "key_0a9789a3-da24-4005-89bd-f087f958512b",
+                "ref": "key_80964c56-fffb-416b-852a-aab5700b1fe9",
                 "keyword": "2",
                 "options": {
                   "sensitive": true,
@@ -688,9 +988,9 @@
                 "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
               },
               {
-                "ref": "ans_fa812354-af2a-4459-bb4a-22e0af08644e",
-                "keyword": "key_0a9789a3-da24-4005-89bd-f087f958512b",
-                "answer": "Elija en que aplicación esta teniendo el inconveniente\n1. App Propia ( APP YPF - PUMA PRIS - AXION ON - SHELL BOX - ETC )\n2. Mercado Pago - Modo - ETC\n3. Todas las aplicaciones",
+                "ref": "ans_d176ac06-8a0e-4d4c-8e11-3f1a0b0c000e",
+                "keyword": "key_80964c56-fffb-416b-852a-aab5700b1fe9",
+                "answer": "Elija en que aplicación esta teniendo el inconveniente\n1. App Propia ( YVOS-PRIS-ON-BOX-ETC )\n2. Mercado Pago - Modo - ETC\n3. Todas las aplicaciones",
                 "options": {
                   "media": null,
                   "buttons": [],
@@ -701,10 +1001,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "8c1790b1db1eeb572804ad9f412b9058"
+                "refSerialize": "45f716047e3bb8f81f44952469896551"
               },
               {
-                "ref": "key_9c5e27b9-70c4-43a2-bc98-9b510c7abcf8",
+                "ref": "key_9d8b2ed8-ee01-497d-a2ac-291447a99248",
                 "keyword": "3",
                 "options": {
                   "sensitive": true,
@@ -713,8 +1013,8 @@
                 "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
               },
               {
-                "ref": "ans_c66d48dc-0ad9-43f7-a06f-819df3906552",
-                "keyword": "key_9c5e27b9-70c4-43a2-bc98-9b510c7abcf8",
+                "ref": "ans_a10a51ce-96a8-4547-b8dc-9bf14353b6f2",
+                "keyword": "key_9d8b2ed8-ee01-497d-a2ac-291447a99248",
                 "answer": "Elija la opcion deseada\n1. Soporte para impresora fiscal\n2. Instalar una impresora fiscal",
                 "options": {
                   "media": null,
@@ -726,10 +1026,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "7b3a303ad25947599c98dfb3972354a6"
+                "refSerialize": "2017eb6eddfaa7dea3b02385fb8e3c8a"
               },
               {
-                "ref": "key_3a92beff-48e6-4ae5-b96b-68d9bf371378",
+                "ref": "key_ad67f739-d835-436c-9ebf-431c96668698",
                 "keyword": "4",
                 "options": {
                   "sensitive": true,
@@ -738,8 +1038,8 @@
                 "refSerialize": "fc09f52170be47fcb14a1cee9c5d3c52"
               },
               {
-                "ref": "ans_885362f9-981e-4385-bb61-3d4a04089e04",
-                "keyword": "key_3a92beff-48e6-4ae5-b96b-68d9bf371378",
+                "ref": "ans_f9bf4e0d-4ec2-4f29-8b1d-d7aca72d80c4",
+                "keyword": "key_ad67f739-d835-436c-9ebf-431c96668698",
                 "answer": "Elija la opcion deseada\n1. Soporte para impresora\n2. Instalar una impresora",
                 "options": {
                   "media": null,
@@ -751,10 +1051,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "4aa5753766c353ef363fe687114ec0cc"
+                "refSerialize": "17550d93339bc2321fc7827332e2e742"
               },
               {
-                "ref": "key_74cbd684-af05-4503-b758-d0b61e2a6c58",
+                "ref": "key_5e3d42d8-85dd-4698-a87b-3e7344a2d12a",
                 "keyword": "5",
                 "options": {
                   "sensitive": true,
@@ -763,8 +1063,8 @@
                 "refSerialize": "660d6f380cd3d2aa67431f161ba4eccf"
               },
               {
-                "ref": "ans_03eb37e4-0ed3-44b0-b1f5-d841195e3035",
-                "keyword": "key_74cbd684-af05-4503-b758-d0b61e2a6c58",
+                "ref": "ans_1b91bdf8-cdc7-41ee-be36-4bea93f09ac5",
+                "keyword": "key_5e3d42d8-85dd-4698-a87b-3e7344a2d12a",
                 "answer": "Elija el origen del problema\n1. Facturación\n2. Cierre de turno\n3. Informes\n4. Otro",
                 "options": {
                   "media": null,
@@ -776,10 +1076,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "1336aecd8c1408eae30bb5f82fd203c3"
+                "refSerialize": "d0aee93b584e6e397da83254569af517"
               },
               {
-                "ref": "key_a916683f-768f-4f82-9f4a-1ecba5d41190",
+                "ref": "key_08130dcc-a63b-4a80-974c-f75efd2409f4",
                 "keyword": "6",
                 "options": {
                   "sensitive": true,
@@ -788,8 +1088,8 @@
                 "refSerialize": "ae093091123de34d8570657f16bd7343"
               },
               {
-                "ref": "ans_8fbacb81-215d-4092-a16b-b988af1c12a3",
-                "keyword": "key_a916683f-768f-4f82-9f4a-1ecba5d41190",
+                "ref": "ans_eaab1795-5804-4f8a-9a97-709d3afded48",
+                "keyword": "key_08130dcc-a63b-4a80-974c-f75efd2409f4",
                 "answer": "Elija donde se encuentra el inconveniente\n1. Libro IVA Compra\n2. Libro IVA Venta",
                 "options": {
                   "media": null,
@@ -801,10 +1101,10 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "fdf6b51ccec98721fa07fde3cf018b6e"
+                "refSerialize": "1b54ac7dd54be1ba3ea6fc9eb67db625"
               },
               {
-                "ref": "key_96cd5d47-5e11-49f3-8066-df8b7654863c",
+                "ref": "key_78a17534-c501-4991-b898-84eccfcaac31",
                 "keyword": "7",
                 "options": {
                   "sensitive": true,
@@ -813,8 +1113,8 @@
                 "refSerialize": "d557e5600097df00d97951283f83f6bd"
               },
               {
-                "ref": "ans_0e4ed4f0-ced9-47ca-95af-6ffe55c52636",
-                "keyword": "key_96cd5d47-5e11-49f3-8066-df8b7654863c",
+                "ref": "ans_62c301f1-6047-47db-9d83-0e0fead4ae1a",
+                "keyword": "key_78a17534-c501-4991-b898-84eccfcaac31",
                 "answer": "Describa el problema por escrito o adjunte un AUDIO",
                 "options": {
                   "media": null,
@@ -826,16 +1126,16 @@
                   "keyword": {},
                   "callback": true
                 },
-                "refSerialize": "c269169050084f90829f38da22a104c3"
+                "refSerialize": "93f77d72896b5921569a8066b23f6635"
               }
             ],
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "7e19380b431b8222825dd5909f71a1db"
+          "refSerialize": "826fe6e083cd6a017caa4387a03e7e65"
         },
         {
-          "ref": "key_c010de9c-e3f5-4b2a-a7e5-2ad4a9598812",
+          "ref": "key_5230789e-26e6-4dbd-81d1-b85d2d5da7c2",
           "keyword": "0",
           "options": {
             "sensitive": true,
@@ -844,8 +1144,8 @@
           "refSerialize": "cd74bc5a41b3d90e6ea17ea895914842"
         },
         {
-          "ref": "ans_84262b47-bbda-4a5b-b5bb-0c94e39449c9",
-          "keyword": "key_c010de9c-e3f5-4b2a-a7e5-2ad4a9598812",
+          "ref": "ans_a2fd503e-d23c-46cf-9ba8-8e7c70d00a8d",
+          "keyword": "key_5230789e-26e6-4dbd-81d1-b85d2d5da7c2",
           "answer": "Esta opcion esta disponible para casos donde mas de la mitad de los puntos de venta no pueden facturar\nSi esto es asi envie *si*\nDe lo contrario envie *no*",
           "options": {
             "media": null,
@@ -857,10 +1157,10 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "baae38c8a15b32e6938cf999a4b02138"
+          "refSerialize": "e50daffe9cea3353f5a4dfe31c4073ad"
         },
         {
-          "ref": "key_d3a298f9-f3ba-4e81-89d7-070570aec661",
+          "ref": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
           "keyword": "3",
           "options": {
             "sensitive": true,
@@ -869,8 +1169,8 @@
           "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
         },
         {
-          "ref": "ans_8c18f047-3e4e-4a22-b22c-4242e99164c7",
-          "keyword": "key_d3a298f9-f3ba-4e81-89d7-070570aec661",
+          "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+          "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
           "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
           "options": {
             "media": null,
@@ -882,13 +1182,996 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "5d22818e139b031e038d79cc7cb46c1c"
+          "refSerialize": "afa89981fa2be8d89e9f19082cbb161a"
         }
       ],
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "082294a32918e947577e657e9ebb4d07",
+    "refSerialize": "3f710c7b908e75c00bd0d208b048a71e",
     "from": "5493515924253"
+  },
+  {
+    "ref": "c35bcd4e-ecc5-4cd0-bead-d015a580ccfb",
+    "keyword": "3f710c7b908e75c00bd0d208b048a71e",
+    "answer": "3",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "3c79d6e0-97a0-4765-8c13-f2679d05904a",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "asd",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "6988c0490446f551a44ac1d6ae1ba6a3"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el numero de telefono sin 0 y sin 15",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "2ff35c90-d8d2-44b6-82d3-23718b353c67",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "3516454748",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "1b0d70c0686b772fb6068bf82c5e94aa"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Indique para que estación quiere dar de alta este usuario",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "7540bf3e-2f91-49dd-88a8-1fafad9042d2",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra dar de alta a nuevos usuarios ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "54c8cd80-a4c3-4f45-8431-6e95eef574c1",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra ver los instructivos Admin / Contables ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "39d8e11b-63d9-4253-bad5-2deb2e3778cd",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra enviar tickets *SOS* ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "c1336286-fc40-4d2a-bbaa-684d75d3274a",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario es encargado de algun area y recibira copia de los tickets de dicha area ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "48d32982-5551-45ae-9fde-07b2682db668",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Verifique que los datos sean correctos",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "f353f8b9-73aa-4457-8f4f-2e653afcdc05",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "4",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "e8139b7fa2fbc1b48f247924f8ad1961"
+  },
+  {
+    "ref": "d5c7021b-e4e6-4e86-a88e-58a9d0ad96bf",
+    "keyword": "e8139b7fa2fbc1b48f247924f8ad1961",
+    "answer": "sigesbot",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "c5ec9969bd663945d9b54dda57567456"
+  },
+  {
+    "ref": "ans_0c33adfa-e4f0-4073-92ea-8696f8591f6f",
+    "keyword": "key_a2b42f53-4e83-4ed4-9e66-0792b223e2a7",
+    "answer": "Gracias por comunicarte con Sistema SIGES.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "60657f361f80d298d1296589123a4c84",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "ans_2fbe492c-9821-4fb5-938a-cebfdd82d178",
+    "keyword": "ans_0c33adfa-e4f0-4073-92ea-8696f8591f6f",
+    "answer": "Elija la opcion deseada",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [
+        {
+          "ref": "key_626945eb-4431-4646-8726-c9a91ce9e8a9",
+          "keyword": "1",
+          "options": {
+            "sensitive": true,
+            "regex": false
+          },
+          "refSerialize": "065e0005da6e5c278a53691e53b48955"
+        },
+        {
+          "ref": "ans_d9fe1a35-c1f9-4e96-953d-b742505caf8c",
+          "keyword": "key_626945eb-4431-4646-8726-c9a91ce9e8a9",
+          "answer": "__call_action__",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "5bea56debaf0c1852ef7605cc0f16bb0"
+        },
+        {
+          "ref": "ans_e8d53df3-75a2-4a35-abf7-738e87d7f3a5",
+          "keyword": "ans_d9fe1a35-c1f9-4e96-953d-b742505caf8c",
+          "answer": "Elija una categoria",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "12d685386f0a56057281bfcc2a340de4"
+        },
+        {
+          "ref": "key_c1d6f2ad-3450-4703-8a89-37a6dd59f891",
+          "keyword": "2",
+          "options": {
+            "sensitive": true,
+            "regex": false
+          },
+          "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
+        },
+        {
+          "ref": "ans_f02f307b-b230-4acf-ae45-ec5ebbbd3131",
+          "keyword": "key_c1d6f2ad-3450-4703-8a89-37a6dd59f891",
+          "answer": "Verificando...",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "d8c35350622e518fba2be20a23e3cc73"
+        },
+        {
+          "ref": "ans_336e2afe-e60f-466e-ba9f-e7fe388f9cf7",
+          "keyword": "ans_f02f307b-b230-4acf-ae45-ec5ebbbd3131",
+          "answer": "Verificando...",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "a590550fe1cb7de0800511995195175e"
+        },
+        {
+          "ref": "ans_ab67749b-0156-4937-8f48-bdf7e87e9c0d",
+          "keyword": "ans_336e2afe-e60f-466e-ba9f-e7fe388f9cf7",
+          "answer": "Elija el numero del problema que tiene\n1. Despachos CIO\n2. Apps de Pago y Fidelización\n3. Impresora Fiscal / Comandera\n4. Impresora Común / Oficina\n5. Sistema SIGES\n6. Libro IVA\n7. Servidor",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [
+              {
+                "ref": "key_09108ce9-1937-4436-b053-bc37d223d161",
+                "keyword": "1",
+                "options": {
+                  "sensitive": true,
+                  "regex": false
+                },
+                "refSerialize": "065e0005da6e5c278a53691e53b48955"
+              },
+              {
+                "ref": "ans_5e6209e8-33a2-42d5-8f9f-121d76d13e87",
+                "keyword": "key_09108ce9-1937-4436-b053-bc37d223d161",
+                "answer": "Describa el problema por escrito o adjunte un AUDIO",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": true
+                },
+                "refSerialize": "8eae92bdd7a0530ca8571ad50a5424d2"
+              },
+              {
+                "ref": "key_80964c56-fffb-416b-852a-aab5700b1fe9",
+                "keyword": "2",
+                "options": {
+                  "sensitive": true,
+                  "regex": false
+                },
+                "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
+              },
+              {
+                "ref": "ans_d176ac06-8a0e-4d4c-8e11-3f1a0b0c000e",
+                "keyword": "key_80964c56-fffb-416b-852a-aab5700b1fe9",
+                "answer": "Elija en que aplicación esta teniendo el inconveniente\n1. App Propia ( YVOS-PRIS-ON-BOX-ETC )\n2. Mercado Pago - Modo - ETC\n3. Todas las aplicaciones",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": true
+                },
+                "refSerialize": "45f716047e3bb8f81f44952469896551"
+              },
+              {
+                "ref": "key_9d8b2ed8-ee01-497d-a2ac-291447a99248",
+                "keyword": "3",
+                "options": {
+                  "sensitive": true,
+                  "regex": false
+                },
+                "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
+              },
+              {
+                "ref": "ans_a10a51ce-96a8-4547-b8dc-9bf14353b6f2",
+                "keyword": "key_9d8b2ed8-ee01-497d-a2ac-291447a99248",
+                "answer": "Elija la opcion deseada\n1. Soporte para impresora fiscal\n2. Instalar una impresora fiscal",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": true
+                },
+                "refSerialize": "2017eb6eddfaa7dea3b02385fb8e3c8a"
+              },
+              {
+                "ref": "key_ad67f739-d835-436c-9ebf-431c96668698",
+                "keyword": "4",
+                "options": {
+                  "sensitive": true,
+                  "regex": false
+                },
+                "refSerialize": "fc09f52170be47fcb14a1cee9c5d3c52"
+              },
+              {
+                "ref": "ans_f9bf4e0d-4ec2-4f29-8b1d-d7aca72d80c4",
+                "keyword": "key_ad67f739-d835-436c-9ebf-431c96668698",
+                "answer": "Elija la opcion deseada\n1. Soporte para impresora\n2. Instalar una impresora",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": true
+                },
+                "refSerialize": "17550d93339bc2321fc7827332e2e742"
+              },
+              {
+                "ref": "key_5e3d42d8-85dd-4698-a87b-3e7344a2d12a",
+                "keyword": "5",
+                "options": {
+                  "sensitive": true,
+                  "regex": false
+                },
+                "refSerialize": "660d6f380cd3d2aa67431f161ba4eccf"
+              },
+              {
+                "ref": "ans_1b91bdf8-cdc7-41ee-be36-4bea93f09ac5",
+                "keyword": "key_5e3d42d8-85dd-4698-a87b-3e7344a2d12a",
+                "answer": "Elija el origen del problema\n1. Facturación\n2. Cierre de turno\n3. Informes\n4. Otro",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": true
+                },
+                "refSerialize": "d0aee93b584e6e397da83254569af517"
+              },
+              {
+                "ref": "key_08130dcc-a63b-4a80-974c-f75efd2409f4",
+                "keyword": "6",
+                "options": {
+                  "sensitive": true,
+                  "regex": false
+                },
+                "refSerialize": "ae093091123de34d8570657f16bd7343"
+              },
+              {
+                "ref": "ans_eaab1795-5804-4f8a-9a97-709d3afded48",
+                "keyword": "key_08130dcc-a63b-4a80-974c-f75efd2409f4",
+                "answer": "Elija donde se encuentra el inconveniente\n1. Libro IVA Compra\n2. Libro IVA Venta",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": true
+                },
+                "refSerialize": "1b54ac7dd54be1ba3ea6fc9eb67db625"
+              },
+              {
+                "ref": "key_78a17534-c501-4991-b898-84eccfcaac31",
+                "keyword": "7",
+                "options": {
+                  "sensitive": true,
+                  "regex": false
+                },
+                "refSerialize": "d557e5600097df00d97951283f83f6bd"
+              },
+              {
+                "ref": "ans_62c301f1-6047-47db-9d83-0e0fead4ae1a",
+                "keyword": "key_78a17534-c501-4991-b898-84eccfcaac31",
+                "answer": "Describa el problema por escrito o adjunte un AUDIO",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": true
+                },
+                "refSerialize": "93f77d72896b5921569a8066b23f6635"
+              }
+            ],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "826fe6e083cd6a017caa4387a03e7e65"
+        },
+        {
+          "ref": "key_5230789e-26e6-4dbd-81d1-b85d2d5da7c2",
+          "keyword": "0",
+          "options": {
+            "sensitive": true,
+            "regex": false
+          },
+          "refSerialize": "cd74bc5a41b3d90e6ea17ea895914842"
+        },
+        {
+          "ref": "ans_a2fd503e-d23c-46cf-9ba8-8e7c70d00a8d",
+          "keyword": "key_5230789e-26e6-4dbd-81d1-b85d2d5da7c2",
+          "answer": "Esta opcion esta disponible para casos donde mas de la mitad de los puntos de venta no pueden facturar\nSi esto es asi envie *si*\nDe lo contrario envie *no*",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "e50daffe9cea3353f5a4dfe31c4073ad"
+        },
+        {
+          "ref": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+          "keyword": "3",
+          "options": {
+            "sensitive": true,
+            "regex": false
+          },
+          "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
+        },
+        {
+          "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+          "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+          "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "afa89981fa2be8d89e9f19082cbb161a"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "3f710c7b908e75c00bd0d208b048a71e",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "01e17bcc-cf20-4cf2-9238-07958fcd917a",
+    "keyword": "3f710c7b908e75c00bd0d208b048a71e",
+    "answer": "3",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "c6c57a04-749d-40dc-ad57-df14b4cb750f",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "asd",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "6988c0490446f551a44ac1d6ae1ba6a3"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el numero de telefono sin 0 y sin 15",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "85e9a7dc-2b56-4b4f-87d4-2ef0713d4456",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "3516454748",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "1b0d70c0686b772fb6068bf82c5e94aa"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Indique para que estación quiere dar de alta este usuario",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "264e604b-838a-4b36-a2cf-887c2ee46148",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra dar de alta a nuevos usuarios ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "998229a5-4341-452e-84af-c82ce82077b4",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra ver los instructivos Admin / Contables ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "7ba53d7a-154f-4a06-ada9-152d25611ed6",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra enviar tickets *SOS* ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "5e8654ba-b62f-4e60-a0ff-03a6d805418a",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario es encargado de algun area y recibira copia de los tickets de dicha area ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "54125dc2-3045-4f1a-8b7a-17ded09c67c9",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Verifique que los datos sean correctos",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "dc3fba1c-a6b1-4c3e-8b65-03707c3dba0d",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "3",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "ce82ae48-c03e-40d1-bd77-730e9a46008a",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "asdasd2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "7d3c36ba4b674e15c7f787f6f98bdd7e"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Ingrese el numero de telefono sin 0 y sin 15",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "049aa63d-e6c1-4ac9-9be7-4628913e095b",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1234567890",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "94b67ed11ef5842dda3f3283adebc31b"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Indique para que estación quiere dar de alta este usuario",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "c4cd3e3f-0a95-47c5-97a4-acddbf7fe376",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra dar de alta a nuevos usuarios ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "f7869772-08d1-4eb9-8fd6-7a4777a38168",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra ver los instructivos Admin / Contables ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "0d0f91e1-7d4b-479a-9b06-8586dfcb2cec",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario podra enviar tickets *SOS* ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "ec050885-6930-415a-83b7-cac202d9e684",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Este usuario es encargado de algun area y recibira copia de los tickets de dicha area ?\n1. SI\n2. NO",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "47a939bb-b027-4ab0-a14d-b6ffbb3fde2a",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "2",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "ans_3d67ff67-c69b-4bf9-b064-17d5689799bd",
+    "keyword": "key_ef9fcf22-aed0-4058-9892-969df4114d72",
+    "answer": "Verifique que los datos sean correctos",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "afa89981fa2be8d89e9f19082cbb161a",
+    "from": "5493515924253"
+  },
+  {
+    "ref": "fd4b1cea-414e-4b3b-b2f2-29209e4cc812",
+    "keyword": "afa89981fa2be8d89e9f19082cbb161a",
+    "answer": "1",
+    "options": {},
+    "from": "5493515924253",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
   }
 ]

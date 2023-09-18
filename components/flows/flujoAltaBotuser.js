@@ -25,6 +25,8 @@ const sigPregunta = (orden) => {
 
     switch (orden) {
 
+        case 1: return 'Ingrese el nombre de la persona que va a ser dada de alta para usar el chatbot'
+
         case 2: return "Ingrese el numero de telefono sin 0 y sin 15"
 
         case 3: return "Indique para que estación quiere dar de alta este usuario"
@@ -37,7 +39,7 @@ const sigPregunta = (orden) => {
 
         case 7: return "Este usuario es encargado de algun area y recibira copia de los tickets de dicha area ?\n1. SI\n2. NO"
 
-        case 8: return "Indique el area\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion\n5. Global"
+        case 8: return "Indique el area\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion\n5. Gerente / Dueño"
 
         case 9: return "Ingrese el correo electronico del encargado"
 
@@ -210,6 +212,17 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
                     return true
 
                 case "2":
+
+                    addProps(ctx.from,{pregunta: 0})
+                    return true
+
+                case "3":
+                    await altaBotuser(ctx.from)
+                    await respuesta(ctx.from,provider,"Usuario creado exitosamente\nA continuación daremos de alta a un nuevo usuario")
+                    addProps(ctx.from,{pregunta: 0})
+                    return true
+
+                case "4":
 
                     addProps(ctx.from,{pregunta: 100})
                     await respuesta(ctx.from,provider,"Escriba *sigesbot* para volver a comenzar")

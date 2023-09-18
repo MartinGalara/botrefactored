@@ -4,7 +4,7 @@ const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("..
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
 const flujoAplicaciones = addKeyword('2',{sensitive:true})
-.addAnswer('Elija en que aplicación esta teniendo el inconveniente\n1. App Propia ( APP YPF - PUMA PRIS - AXION ON - SHELL BOX - ETC )\n2. Mercado Pago - Modo - ETC\n3. Todas las aplicaciones',{capture:true}, async (ctx,{fallBack,provider}) => {
+.addAnswer('Elija en que aplicación esta teniendo el inconveniente\n1. App Propia ( YVOS-PRIS-ON-BOX-ETC )\n2. Mercado Pago - Modo - ETC\n3. Todas las aplicaciones',{capture:true}, async (ctx,{fallBack,provider}) => {
 
     const i = getProp(ctx.from,'pregunta')
 

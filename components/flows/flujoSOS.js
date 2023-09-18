@@ -1,6 +1,6 @@
 const { addKeyword } = require('@bot-whatsapp/bot')
 
-const { addProps,getProp,incPregunta,sendSosTicket,getUsers } = require("../api/apiTickets")
+const { addProps,getProp,incPregunta,sendSosTicket,getUsers,addAudio } = require("../api/apiTickets")
 const { respuesta,respuestaConDelay,sendSOSMessages } = require("../api/apiMensajes")
 
 const flujoSOS = addKeyword('0',{sensitive:true})
@@ -27,6 +27,8 @@ const sigPregunta = (orden) => {
         case 1: return "Esta pregunta solo admite *si* o *no* como respuesta"
 
         case 2: return "Indique en que estación ocurre el incidente"
+
+        case 3: return "Adjunte un AUDIO explicando el incidente"
     
         default:
 
@@ -55,14 +57,6 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
                 if(!opciones){
 
                     addProps(ctx.from,{pregunta: 2})
-
-                    const ticket = await sendSosTicket(ctx.from)
-
-                    ticket ? await respuesta(ctx.from,provider,`Tu numero de ticket es ${ticket}.`) : await respuesta(ctx.from,provider,`Ticket generado exitosamente.`)
-
-                    await sendSOSMessages(ctx.from,provider)
-           
-                    await respuesta(ctx.from,provider,`Gracias por comunicarse con nosotros.`)
                     
                     return true
                 }
@@ -81,6 +75,18 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
 
                 addProps(ctx.from,{selectedUser: cantidad[ctx.body-1]})
 
+                return true
+            }
+            else{
+                const opciones = getUsers(ctx.from)
+                respuestaConDelay(ctx.from,provider,opciones)
+                return false
+            }
+
+        case 3:
+
+            if(ctx.message.hasOwnProperty('audioMessage')){
+                addAudio(ctx.from,ctx)
                 const ticket = await sendSosTicket(ctx.from)
 
                 ticket ? await respuesta(ctx.from,provider,`Tu numero de ticket es ${ticket}.`) : await respuesta(ctx.from,provider,`Ticket generado exitosamente.`)
@@ -88,12 +94,9 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
                 await sendSOSMessages(ctx.from,provider)
            
                 await respuesta(ctx.from,provider,`Gracias por comunicarse con nosotros.`)
-
                 return true
-            }
-            else{
-                const opciones = getUsers(ctx.from)
-                respuestaConDelay(ctx.from,provider,opciones)
+            }else{
+                await respuesta(ctx.from,provider,"Este campo admite solo AUDIO")
                 return false
             }
         }

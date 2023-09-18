@@ -17,7 +17,7 @@ const flujoLibroIva = require("./flujoLibroIva")
 const flujoServidor = require("./flujoServidor")
 
 const flujoSoporte = addKeyword("2",{sensitive:true})
-.addAnswer("Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion",{capture:true},async (ctx,{provider,fallBack}) => {
+.addAnswer("Verificando...",{capture:true},async (ctx,{provider,fallBack}) => {
 
     const i = getProp(ctx.from,'flagUsers')
 
@@ -30,7 +30,7 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
     if(pregunta) fallBack(pregunta)
 
 })
-.addAnswer("Verificando",{capture:true},(ctx,{fallBack}) => {
+.addAnswer("Verificando...",{capture:true},(ctx,{fallBack}) => {
 
     const pcs = getProp(ctx.from,'computers');
     
@@ -67,9 +67,9 @@ const sigPregunta = (orden) => {
 
     switch (orden) {
 
-        case 1: return "Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion"
+        case 1: return "Indique para que estación necesita soporte"
 
-        case 2: return "Indique para que estación necesita soporte"
+        case 2: return "Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion"
     
         default:
 
@@ -82,8 +82,24 @@ const sigPregunta = (orden) => {
 const funcionPregunta = async (orden,provider,ctx,endFlow) => {
 
     switch (orden) {
-        
+
         case 1:
+
+            const cantidad = getProp(ctx.from,'users')
+
+            if(ctx.body > 0 && ctx.body <= cantidad.length){
+
+                addProps(ctx.from,{selectedUser: cantidad[ctx.body-1]})
+
+                return true
+            }
+            else{
+                const opciones = getUsers(ctx.from)
+                respuestaConDelay(ctx.from,provider,opciones)
+                return false
+            }
+        
+        case 2:
 
             const flag = zonaElegida(ctx.from,ctx.body)
 
@@ -103,33 +119,14 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
                     return true
                 }
                 else{
-                    respuestaConDelay(ctx.from,provider,opciones)
+                    await computers(ctx.from)
+
+                    const pcs = computerOptions(ctx.from);
+
+                    respuestaConDelay(ctx.from,provider,pcs)
                     return true
                 }
             }
-
-        case 2:
-
-            const cantidad = getProp(ctx.from,'users')
-
-            if(ctx.body > 0 && ctx.body <= cantidad.length){
-
-                addProps(ctx.from,{selectedUser: cantidad[ctx.body-1]})
-
-                await computers(ctx.from)
-
-                const pcs = computerOptions(ctx.from);
-
-                respuestaConDelay(ctx.from,provider,pcs)
-
-                return true
-            }
-            else{
-                const opciones = getUsers(ctx.from)
-                respuestaConDelay(ctx.from,provider,opciones)
-                return false
-            }
-    
     }
 }
 
