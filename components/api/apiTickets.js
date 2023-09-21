@@ -315,6 +315,7 @@ const sendSosTicket = async (from) => {
   <p>Info Cliente: ${selectedUser.info}</p>
   <p>Teléfono que generó el ticket: ${ticket[from].phone}</p>
   <p>Urgencia indicada por el cliente: SOS - URGENTE</p>
+  <p>Descripción del problema: ${ticket[from].description}</p>
   </div>
   `;
 

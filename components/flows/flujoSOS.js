@@ -28,7 +28,7 @@ const sigPregunta = (orden) => {
 
         case 2: return "Indique en que estación ocurre el incidente"
 
-        case 3: return "Adjunte un AUDIO explicando el incidente"
+        case 3: return "Escriba o adjunte un AUDIO explicando brevemente el incidente"
     
         default:
 
@@ -87,18 +87,24 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
 
             if(ctx.message.hasOwnProperty('audioMessage')){
                 addAudio(ctx.from,ctx)
-                const ticket = await sendSosTicket(ctx.from)
-
-                ticket ? await respuesta(ctx.from,provider,`Tu numero de ticket es ${ticket}.`) : await respuesta(ctx.from,provider,`Ticket generado exitosamente.`)
-
-                await sendSOSMessages(ctx.from,provider)
-           
-                await respuesta(ctx.from,provider,`Gracias por comunicarse con nosotros.`)
-                return true
-            }else{
-                await respuesta(ctx.from,provider,"Este campo admite solo AUDIO")
+                addProps(ctx.from,{description: "Audio adjuntado"}) 
+            }else if(ctx.message.hasOwnProperty('extendedTextMessage') || ctx.message.hasOwnProperty('conversation')){
+                addProps(ctx.from,{description: ctx.body})
+            }
+            else{
+                await respuesta(ctx.from,provider,"Este campo admite solo audio o texto")
                 return false
             }
+
+            const ticket = await sendSosTicket(ctx.from)
+
+            ticket ? await respuesta(ctx.from,provider,`Tu numero de ticket es ${ticket}.`) : await respuesta(ctx.from,provider,`Ticket generado exitosamente.`)
+
+            await sendSOSMessages(ctx.from,provider)
+           
+            await respuesta(ctx.from,provider,`Gracias por comunicarse con nosotros.`)
+            return true
+
         }
 }
 

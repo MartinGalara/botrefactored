@@ -120,9 +120,16 @@ const computerOptions = (from) => {
   
 }
 
-const opMenuProblemas = (string) => {
+const opMenuProblemas = (from) => {
 
-    switch (string) {
+    const zone = getProp(from,'zone')
+
+    if(zone === "A") return ['1. Apps de Pago y Fidelización','2. Impresora Fiscal / Comandera','3. Despachos CIO','4. Sistema SIGES','5. Impresora Común / Oficina','6. Libro IVA','7. Servidor']
+    else return ['1. Apps de Pago y Fidelización','2. Impresora Fiscal / Comandera','3. Despachos CIO','4. Sistema SIGES','5. Impresora Común / Oficina']
+
+
+
+    /* switch (string) {
         case 'array':
             return ['Elija el numero del problema que tiene','1. Despachos CIO','2. Apps de Pago y Fidelización','3. Impresora Fiscal / Comandera','4. Impresora Común / Oficina','5. Sistema SIGES','6. Libro IVA','7. Servidor']
     
@@ -142,7 +149,7 @@ const opMenuProblemas = (string) => {
         
         default:
             break;
-    }
+    } */
 }
 
 module.exports = { opMenuInicial,opMenuInstructivos,opcionesInstructivos,computerOptions,opMenuProblemas }

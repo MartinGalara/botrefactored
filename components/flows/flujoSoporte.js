@@ -6,7 +6,7 @@ const { addProps,getProp,getBandera,computerInfo,incFlagUsers,getUsers } = requi
 const { validateUserID,computers } = require('../api/apiUsuarios')
 const { computerOptions,opMenuProblemas } = require('../api/apiOpciones')
 
-const opcionesIncidentes = opMenuProblemas('array').join('\n');
+//const opcionesIncidentes = opMenuProblemas('array').join('\n');
 
 const flujoDespachosCio = require("./flujoDespachosCio")
 const flujoAplicaciones = require("./flujoAplicaciones")
@@ -30,7 +30,7 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
     if(pregunta) fallBack(pregunta)
 
 })
-.addAnswer("Verificando...",{capture:true},(ctx,{fallBack}) => {
+.addAnswer("Verificando...",{capture:true},(ctx,{fallBack,provider}) => {
 
     const pcs = getProp(ctx.from,'computers');
     
@@ -45,23 +45,43 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
         else fallBack('Elija una opcion valida')
     }
 
+    const opcionesIncidentes = opMenuProblemas(ctx.from).join('\n');
+
+    respuestaConDelay(ctx.from,provider,opcionesIncidentes)
+
 })
-.addAnswer(opcionesIncidentes,
-{capture:true},(ctx,{fallBack}) => {
+.addAnswer("Elija el numero del problema que tiene",
+    {capture:true},(ctx,{fallBack,provider}) => {
 
-    const selected = ctx.body
-    const objOpciones = opMenuProblemas('obj')
-    ctx.body = objOpciones[selected]
+        const validOptions = {
+            '1': "Apps de Pago y Fidelización",
+            '2': "Impresora Fiscal / Comandera",
+            '3': "Despachos CIO",
+            '4': "Sistema SIGES",
+            '5': "Impresora Común / Oficina",
+            '6': false,
+            '7': false,
+        };
 
-    const opciones = opMenuProblemas('opciones')
+        const zone = getProp(ctx.from,'zone')
 
-    if(!opciones.includes(ctx.body)) return fallBack()
+        if(zone === "A"){
+            validOptions['6'] = "Libro IVA"
+            validOptions['7'] = "Servidor"
+        }
 
-    addProps(ctx.from,{problem: ctx.body}) 
-    addProps(ctx.from,{pregunta: 1}) 
+        if (!validOptions[ctx.body]) {
+            const opcionesIncidentes = opMenuProblemas(ctx.from).join('\n');
 
-},[flujoDespachosCio,flujoAplicaciones,flujoImpresoraFiscal,flujoImpresoraComun,flujoSiges,flujoLibroIva,flujoServidor])
+            respuestaConDelay(ctx.from,provider,opcionesIncidentes)
 
+            return fallBack()
+        }
+
+        addProps(ctx.from,{problem: validOptions[ctx.body]}) 
+        addProps(ctx.from,{pregunta: 1}) 
+    
+    },[flujoDespachosCio,flujoAplicaciones,flujoImpresoraFiscal,flujoImpresoraComun,flujoSiges,flujoLibroIva,flujoServidor])
 
 const sigPregunta = (orden) => {
 

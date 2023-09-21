@@ -24,7 +24,7 @@ const sigPregunta = (orden) => {
 
         case 2: return "Indique el período en el cual hay un inconveniente"
 
-        case 3: return 'Describa el problema por escrito o adjunte un AUDIO.\nSi conoce marca / modelo de impresora y/o si se encuentra conectada y con que tipo de cable, indiquelo.'
+        case 3: return 'Describa el problema por escrito o adjunte un AUDIO.'
 
         case 4: return 'Si desea aqui puede adjuntar fotos\nDe lo contrario envíe "0" para continuar'
 

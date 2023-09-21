@@ -3,7 +3,7 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("../api/apiTickets")
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
-const flujoImpresoraFiscal = addKeyword('3',{sensitive:true})
+const flujoImpresoraFiscal = addKeyword('2',{sensitive:true})
 .addAnswer('Elija la opcion deseada\n1. Soporte para impresora fiscal\n2. Instalar una impresora fiscal',{capture:true}, async (ctx,{fallBack,provider}) => {
 
     const i = getProp(ctx.from,'pregunta')

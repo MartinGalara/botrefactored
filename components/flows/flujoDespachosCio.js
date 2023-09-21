@@ -3,7 +3,7 @@ const { addKeyword } = require('@bot-whatsapp/bot')
 const { addAudio,addProps,getProp,addImage,incPregunta,sendEmail } = require("../api/apiTickets")
 const { respuesta,sendMessages } = require("../api/apiMensajes")
 
-const flujoDespachosCio = addKeyword('1',{sensitive:true})
+const flujoDespachosCio = addKeyword('3',{sensitive:true})
 .addAnswer('Describa el problema por escrito o adjunte un AUDIO',{capture:true}, async (ctx,{fallBack,provider}) => {
 
     const i = getProp(ctx.from,'pregunta')
