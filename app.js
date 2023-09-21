@@ -51,7 +51,7 @@ const flujoPrincipal = addKeyword("sigesbot")
             }
             else{
                 addProps(ctx.from,{flagUsers: 2})
-                await respuestaConDelay(ctx.from,provider,"Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion")
+                await respuestaConDelay(ctx.from,provider,"Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa/Boxes\n2. Tienda\n3. Administracion")
                 
             }
         }

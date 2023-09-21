@@ -25,11 +25,7 @@ const sendMessages = async (from,provider) => {
   
     switch(ticketZone){
       case "P":
-        zone = "Playa"
-        break;
-        
-      case "B":
-        zone = "Boxes"
+        zone = "Playa/Boxes"
         break;
   
       case "A":

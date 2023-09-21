@@ -353,9 +353,8 @@ const newUserInfo = (from) => {
 
   // Mapear el valor de 'area' a la palabra completa correspondiente
   const areaMapping = {
-    'P': 'Playa',
+    'P': 'Playa/Boxes',
     'T': 'Tienda',
-    'B': 'Boxes',
     'A': 'Administracion',
     'G': 'Gerente / Dueño',
   };

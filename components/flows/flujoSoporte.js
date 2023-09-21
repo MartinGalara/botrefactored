@@ -89,7 +89,7 @@ const sigPregunta = (orden) => {
 
         case 1: return "Indique para que estación necesita soporte"
 
-        case 2: return "Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion"
+        case 2: return "Elija en que area se encuentra el puesto de trabajo donde necesita soporte\n1. Playa/Boxes\n2. Tienda\n3. Administracion"
     
         default:
 

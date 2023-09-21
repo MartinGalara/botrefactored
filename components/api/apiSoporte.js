@@ -43,9 +43,6 @@ const zonaElegida = (from,body) => {
             addProps(from,{zone: "T"})
             return true;
         case "3": 
-            addProps(from,{zone: "B"})
-            return true;
-        case "4": 
             addProps(from,{zone: "A"})
             return true;
 

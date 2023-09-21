@@ -39,7 +39,7 @@ const sigPregunta = (orden) => {
 
         case 7: return "Este usuario es encargado de algun area y recibira copia de los tickets de dicha area ?\n1. SI\n2. NO"
 
-        case 8: return "Indique el area\n1. Playa\n2. Tienda\n3. Boxes\n4. Administracion\n5. Gerente / Dueño"
+        case 8: return "Indique el area\n1. Playa/Boxes\n2. Tienda\n3. Administracion\n4. Gerente / Dueño"
 
         case 9: return "Ingrese el correo electronico del encargado"
 
@@ -176,12 +176,9 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
                     newUserProps(ctx.from,{area:"T"})
                     return true;
                 case "3": 
-                    newUserProps(ctx.from,{area:"B"})
-                    return true;
-                case "4": 
                     newUserProps(ctx.from,{area:"A"})
                     return true;
-                case "5": 
+                case "4": 
                     newUserProps(ctx.from,{area:"G"})
                     return true;
     
