@@ -379,7 +379,7 @@ const newUserInfo = (from) => {
     }
   }
 
-  result += `\nIndique la opcion correcta\n1. Confirmar datos y guardar\n2. No confirmar y volver a empezar\n3. Confirmar y dar de alta nuevo usuario\n4. Cancelar y salir`;
+  result += `\nIndique la opcion correcta\n1. Confirmar y salir\n2. Volver a empezar\n3. Confirmar y dar de alta mas usuarios\n4. No confirmar y salir`;
 
   return result;
 };
