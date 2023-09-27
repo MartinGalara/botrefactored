@@ -83,9 +83,14 @@ const getBandera = (from) => {
 
 const computerInfo = (from,option) => {
 
+  
+
   if(ticket[from].computers[option-1] && option !== "0"){
-    ticket[from].pf = ticket[from].computers[option-1].alias
-    ticket[from].tv = ticket[from].computers[option-1].teamviewer_id
+    const selected = ticket[from].computers[option-1]
+    const banderaShort = selected.bandera.length > 3 ? selected.bandera.substring(0, 3) : selected.bandera;
+    ticket[from].pf = selected.alias
+    ticket[from].tv = selected.teamviewer_id
+    ticket[from].tvalias = `${selected.razonSocial}|${banderaShort}|${selected.identificador}|${selected.ciudad}|${selected.area}|${selected.prefijo}|${selected.extras}`
   }
 
 }
@@ -188,6 +193,7 @@ const sendEmail = async (from) => {
   <p>Teléfono que generó el ticket: ${ticket[from].phone}</p>
   <p>Punto de facturación / PC: ${ticket[from].pf}</p>
   <p>ID TeamViewer: ${ticket[from].tv}</p>
+  <p>Alias en TeamViewer: ${ticket[from].tvalias}</p>
   <p>Urgencia indicada por el cliente: ${ticket[from].priority}</p>
 `;
 

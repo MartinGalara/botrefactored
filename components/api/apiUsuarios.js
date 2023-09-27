@@ -63,27 +63,19 @@ const computers = async (from) => {
 
     const userId = getProp(from,'selectedUser').id
     const zone = getProp(from,'zone')
-
-    console.log(userId)
   
     const config = {
         method: 'get',
-        url: `${process.env.SERVER_URL}/computers?userId=${userId}&zone=${zone}`,
+        url: `${process.env.SERVER_URL}/pcs?clientId=${userId}&area=${zone}`,
     }
       
-    const computers = await axios(config).then((i) => i.data)
-      
-    const hasOrder = computers.some((computer) => computer.order !== null);
-      
-    if(hasOrder){
-        computers.sort((a, b) => a.order - b.order);
-    }else{
-        computers.sort((a, b) => {
+    const computers = await axios(config).then((i) => i.data)      
+    
+    computers.sort((a, b) => {
         if (a.alias < b.alias) return -1;
         if (a.alias > b.alias) return 1;
         return 0;
-        });
-    }
+    });
 
     const computersArray = []
       
@@ -106,8 +98,6 @@ const altaBotuser = async (from) => {
       }
       
     const result = await axios(config).then((i) => i.data)
-
-    console.log(result)
 
 }
 

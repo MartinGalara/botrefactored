@@ -72,7 +72,6 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
             if (/^\d{10}$/.test(telefono)) {
 
               const telefonoConPrefijo = "549" + telefono;
-              console.log(telefonoConPrefijo)
               newUserProps(ctx.from, { phone: telefonoConPrefijo });
           
               const opciones = getUsers(ctx.from);
