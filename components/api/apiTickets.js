@@ -234,13 +234,13 @@ data.html = `${commonHtml}${specificHtml}</div>`;
 
 }
 
-const createTicket = async (userId) => {
+const createTicket = async (clientId) => {
 
   const config = {
     method: 'post',
-    url: `${process.env.SERVER_URL}/tickets`,
+    url: `${process.env.SERVER_URL}/bottickets`,
     data:{
-      userId: userId
+      clientId: clientId
     }
   }
 
@@ -298,7 +298,9 @@ const sendSosTicket = async (from) => {
 
   const allEmails = []
 
-  ticket[from].selectedUser.email.map( e => allEmails.push(e))
+  console.log(ticket[from])
+
+  ticket[from].selectedUser.email.split(',').map( e => allEmails.push(e))
 
   ticket[from].sendEmail.map( e => allEmails.push(e))
 
