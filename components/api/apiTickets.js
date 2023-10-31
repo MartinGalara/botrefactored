@@ -163,7 +163,7 @@ const sendEmail = async (from) => {
 
   const allEmails = []
 
-  ticket[from].selectedUser.email.map( e => allEmails.push(e))
+  ticket[from].selectedUser.email.split(',').map( e => allEmails.push(e))
 
   ticket[from].sendEmail.map( e => allEmails.push(e))
 
