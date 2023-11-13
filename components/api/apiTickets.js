@@ -298,8 +298,6 @@ const sendSosTicket = async (from) => {
 
   const allEmails = []
 
-  console.log(ticket[from])
-
   ticket[from].selectedUser.email.split(',').map( e => allEmails.push(e))
 
   ticket[from].sendEmail.map( e => allEmails.push(e))
