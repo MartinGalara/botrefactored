@@ -77,6 +77,8 @@ const funcionPregunta = async (orden,provider,ctx,endFlow) => {
               const opciones = getUsers(ctx.from);
               if (!opciones) {
                 addProps(ctx.from, { pregunta: 3 });
+                const client = getProp(ctx.from,"selectedUser")
+                newUserProps(ctx.from,{clientId:client.id})
                 return true;
               } else {
                 respuestaConDelay(ctx.from, provider, opciones);
