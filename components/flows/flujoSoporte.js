@@ -42,7 +42,12 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
         addProps(ctx.from,{pf: "PC no esta en nuestra base de datos"})
         addProps(ctx.from,{tv: "Consultar al cliente tv e indentificador de PC y reportarlo"})
         }
-        else fallBack('Elija una opcion valida')
+        else {
+            const pcs = computerOptions(ctx.from);
+
+            respuestaConDelay(ctx.from,provider,pcs)
+            return fallBack('Opcion invalida')
+        }
     }
 
     const opcionesIncidentes = opMenuProblemas(ctx.from).join('\n');
@@ -51,7 +56,7 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
 
 })
 .addAnswer("Elija el numero del problema que tiene",
-    {capture:true},(ctx,{fallBack,provider}) => {
+    {capture:true},(ctx,{fallBack,provider,endFlow}) => {
 
         const validOptions = {
             '1': "Apps de Pago y Fidelización",
@@ -71,11 +76,7 @@ const flujoSoporte = addKeyword("2",{sensitive:true})
         }
 
         if (!validOptions[ctx.body]) {
-            const opcionesIncidentes = opMenuProblemas(ctx.from).join('\n');
-
-            respuestaConDelay(ctx.from,provider,opcionesIncidentes)
-
-            return fallBack()
+            return endFlow("Opcion invalida - Escriba *sigesbot* para volver a comenzar")
         }
 
         addProps(ctx.from,{problem: validOptions[ctx.body]}) 

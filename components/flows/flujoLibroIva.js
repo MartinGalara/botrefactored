@@ -67,7 +67,7 @@ const funcionPregunta = async (orden,provider,ctx) => {
             let flag1
 
             if(ctx.message.hasOwnProperty('audioMessage')){
-              addAudio(ctx.from,ctx)
+              await addAudio(ctx.from,ctx)
               addProps(ctx.from,{description: "Audio adjuntado"}) 
               flag1 = true;
             }else if(ctx.message.hasOwnProperty('extendedTextMessage') || ctx.message.hasOwnProperty('conversation')){

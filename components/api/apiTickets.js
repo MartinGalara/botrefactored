@@ -329,6 +329,8 @@ const sendSosTicket = async (from) => {
     data.attachments = ticket[from].mailAttachments;
   }
 
+  console.log(ticket)
+
   const mail = await transporter.sendMail(data);
 
   return newTicket.id
