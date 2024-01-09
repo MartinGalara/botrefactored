@@ -64,7 +64,7 @@ const opcionesInstructivos = (from) => {
                 path: path.join(mediaFolderPath, file),
             }));
 
-            // Ordenar el array de objetos en base al número del nombre de archivo
+            // Ordenar el array de objetos en base al número del nombre de archivoasd
             pdfObjects.sort((a, b) => {
                 const numberA = parseInt(a.filename.match(/^\d+/)[0]);
                 const numberB = parseInt(b.filename.match(/^\d+/)[0]);
