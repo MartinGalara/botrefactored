@@ -35,7 +35,7 @@ const getInstructivo = (from, index) => {
   if(parseInt(index) === instructivos.length+1) return "Volver"
   if(parseInt(index) === instructivos.length+2) return "Salir"
 
-  // Verificar si el índice es un número entero válido
+  // Verificar si el índice es un número entero válidoasd
   if (!Number.isInteger(numericIndex) || numericIndex <= 0 || numericIndex > instructivos.length) {
     console.error('Índice inválido o fuera de rango.');
     return false;
